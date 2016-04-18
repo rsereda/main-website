@@ -1,0 +1,60 @@
+description = "partner-logo-page"
+
+[staticMenu]
+code = "top-menu"
+
+[staticPage]
+==
+{variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
+
+
+{% partial 'start' %}
+
+<div class="wrapper" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em;">
+
+{% partial "static-topmenu" %}
+
+<!-- Content -->
+<div class="title">
+  <h1>{{titleText }}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div style="margin-bottom: 90px;"></div>
+    <div class="col-xs-12">
+
+      {% page %}
+      
+      <div class="row">
+        {repeater name="logos" prompt="Add another Logo"}
+    
+       
+       <div style="margin-top:20px;margin-left:10px;margin-right:20px;" class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+        
+        <img src="
+            {mediafinder name="logo" label="Logo"}{/mediafinder}
+        "/>
+        {%if loop.index is even %}
+          </div><div class="row">
+         {% endif %}
+        
+        </div>
+        {/repeater}
+       </div>   
+
+    </div>
+    <div class="clearfix"></div>
+    <div style="padding-top:160px;"></div>
+
+  </div>
+</div>
+
+</div>
+
+<!-- Share bar -->
+{% partial "sharebar" %}
+
+<!-- Footer -->
+{% partial "footer" %}
+
+{% partial "end" %}

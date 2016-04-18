@@ -1,0 +1,15 @@
+
+{% for article in __SELF__.articles %}
+<div class="news-container col-xs-4">
+  <div class="img"
+   style="background-image:url({{article.img | media}});">
+  </div>
+  <div class="infos">
+    <div class="date">{{article.date}}</div>
+    <h3>{{article.title}}</h3>
+    <span class="type"></span>
+    <div class="link"><a href="{{article.link}}">Read</a></div>
+  </div>
+</div>
+
+{% endfor %}

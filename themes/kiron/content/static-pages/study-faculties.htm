@@ -1,0 +1,172 @@
+[viewBag]
+title = "Faculties"
+url = "/study/faculties"
+layout = "title-text-static"
+is_hidden = 0
+navigation_hidden = 0
+titleText = "Faculties"
+==
+
+<!--  why you no worky? --> 
+
+<?php
+function onEnd()
+{
+  $this->addJs('assets/js/switch-intro.js');
+}
+?>
+
+==
+
+<p>This page needs some serious love.&nbsp;</p><p>Please have a look at&nbsp;<a href="https://homestead.app/study/faculties">https://homestead.app/study/faculties</a>&nbsp;</p>
+
+
+<div id="curriculum" class="section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-16 centering">
+                {% component 'curriculum' %}
+            </div>
+        </div>
+        <div class="sm-spacer"></div>
+        <div class="row">
+            <div class="switch-intro" class="col-md-16 centering">
+                <div id="wrapper">
+                    <div id="left-side">
+                        <ul>
+                            <li class="business active">
+                                <div class="icon active">
+                                    <i class="icon-business"></i>
+                                </div>
+                                Business School
+                            </li>
+                            <li class="engineering">
+                                <div class="icon">
+                                    <i class="icon-engeneering"></i>
+                                </div>
+                                School of Engineering
+                            </li>
+                            <li class="architecture">
+                                <div class="icon">
+                                    <i class="icon-architecture"></i>
+                                </div>
+                                School of Architecture
+                            </li>
+                            <li class="computer">
+                                <div class="icon">
+                                    <i class="icon-coding"></i>
+                                </div>
+                                School of Computer Science
+                            </li>
+                            <li class="intercultural">
+                                <div class="icon">
+                                    <i class="icon-practical"></i>
+                                </div>
+                                School of Intercultural Studies
+                            </li>
+                            <li class="language">
+                                <div class="icon">
+                                    <i class="icon-languages"></i>
+                                </div>
+                                Language School
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="border">
+                        <div id="line" class="one"></div>
+                    </div>
+
+                    <div id="right-side">
+                        <div id="first" class="active">
+                            <div class="icon big">
+                                <i class="icon-business"></i>
+                            </div>
+
+                            <h1>Business School</h1>
+
+                            <p>At Kiron Business School students can graduate in Business Administration taking courses from the most renowned business schools in the world. Studying business allows students to learn the skills required to succeed in professional life, such as critical and creative thinking, problem solving, communication and research.</p>
+                            <div class="learn-more">
+                                <a class="btn btn-primary col-md-5 left" href="/faculties#business-school" >Learn more</a>
+                            </div>
+
+
+                        </div>
+                        <div id="second">
+                            <div class="icon big">
+                                <i class="icon-engeneering"></i>
+                            </div>
+
+                            <h1>School of Engineering</h1>
+
+                            <p>Kiron School of Engineering will allow students to combine theoretical fields such as mathematics and science and implement them into physical applications, to solve real life problems and bring ideas into reality. Studying engineering at Kiron will be the first step into an enriching field full of possibilities.</p>
+                            <div class="learn-more">
+                                <a class="btn btn-primary col-md-5 left" href="/faculties#school-of-engineering" >Learn more</a>
+                            </div>
+                        </div>
+                        <div id="third">
+                            <div class="icon big">
+                                <i class="icon-architecture"></i>
+                            </div>
+
+                            <h1>School of Architecture</h1>
+
+                            <p>Kiron School of Architecture is designed to foster the capability to substantially improve the built environment. Students will be concerned with the conceptualisation and design of individual buildings as well as urban configurations. Emphasis will be placed on learning how to include existing and emerging social, economic and technical demands into all stages of work.</p>
+                            <div class="learn-more">
+                                <a class="btn btn-primary col-md-5 left" href="/faculties#school-of-architecture" >Learn more</a>
+                            </div>
+
+                        </div>
+                        <div id="fourth">
+                            <div class="icon big">
+                                <i class="icon-coding"></i>
+                            </div>
+
+                            <h1>School of Computer Science</h1>
+
+                            <p>Digitalisation is the major trend of the 21th century and therefore, a degree in Computer Science at Kiron will enable students to follow a career which will give them access to several professions in various industries and help them to solve the major issues of our time.</p>
+                            <div class="learn-more">
+                                <a class="btn btn-primary col-md-5 left" href="/faculties#school-of-computer-science" >Learn more</a>
+                            </div>
+
+                        </div>
+                        <div id="fifth">
+                            <div class="icon big">
+                                <i class="icon-practical"></i>
+                            </div>
+
+                            <h1>School of intercultural studies</h1>
+
+                            <p>Studying at the School of Intercultural Studies of Kiron, you will be able to attend the best courses in the field, offered by the best universities worldwide. Intercultural Studies is a degree that offers you the opportunity to explore in-depth the cultural differences and similarities of people around the world.</p>
+                            <div class="learn-more">
+                                <a class="btn btn-primary col-md-5 left" href="/faculties#school-of-intercultural-studies" >Learn more</a>
+                            </div>
+                        </div>
+                        <div id="sixth">
+                            <div class="icon big">
+                                <i class="icon-languages"></i>
+                            </div>
+
+                            <h1>Language School</h1>
+
+                            <p>Many people have studied in their mother tongue before, thus they have some basic English knowledge, but not enough to study at a university. Research also indicates that immigrant and refugee families live difficult lives as they adjust to new communities, new cultures and a new language.</p>
+                            <div class="learn-more">
+                                <a class="btn btn-primary col-md-5 left" href="/faculties#language-school-head" >Learn more</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,15 @@
+name: 'Top Menu'
+items:
+    -
+        title: 'All static pages'
+        nesting: ''
+        type: all-static-pages
+        url: ''
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: '1'
+        viewBag:
+            isExternal: '0'
+            isHidden: '0'
+            cssClass: ''

@@ -1,0 +1,39 @@
+[viewBag]
+snippetCode = "news-card"
+snippetName = "News Card"
+snippetProperties[day][title] = "day"
+snippetProperties[day][type] = "string"
+snippetProperties[day][default] = ""
+snippetProperties[day][options][] = ""
+snippetProperties[month][title] = "month"
+snippetProperties[month][type] = "string"
+snippetProperties[month][default] = ""
+snippetProperties[month][options][] = ""
+snippetProperties[title][title] = "title"
+snippetProperties[title][type] = "string"
+snippetProperties[title][default] = ""
+snippetProperties[title][options][] = ""
+snippetProperties[subtitle][title] = "subtitle"
+snippetProperties[subtitle][type] = "string"
+snippetProperties[subtitle][default] = ""
+snippetProperties[subtitle][options][] = ""
+==
+<div class='post-module'>
+    <div class='news-thumbnail'>
+        <div class='date'>
+            <div class='day'>{{day}}</div>
+            <div class='month'>{{month}}</div>
+        </div>
+        <div class="img" style="background-image:url(/img/{{img}});"></div>
+    </div>
+    <div class='post-content'>
+        <div class='category'>News</div>
+        <h1 class='news-title'>{{title}}</h1>
+        <h2 class='sub_title'>{{subtitle}}</h2>
+        <p class='news-description'>{{description}}</p>
+        <div class='post-meta'>
+
+        </div>
+    </div>
+    <a href="{{link}}" target="_blank"><span class="container-link"></span></a>
+</div>

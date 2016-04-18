@@ -1,0 +1,60 @@
+static-pages:
+    about:
+        about-challenge-solution: {  }
+        our-impact: {  }
+        about-team: {  }
+        about-branches: {  }
+        about-compentency-pool: {  }
+    kiron-world:
+        kiron-world-driving-innovation: {  }
+        kiron-world-research: {  }
+        kiron-world-empowering-individuals: {  }
+        kiron-world-reinventing-education: {  }
+    study2:
+        study-tracks: {  }
+        study-apply-admission: {  }
+        study-applying-partner-university: {  }
+        study-student-services: {  }
+    support:
+        support-individuals: {  }
+        support-corporate: {  }
+        support-foundation: {  }
+        support-academic-institutions: {  }
+        support-contributors: {  }
+        support-ngos-and-non-profits: {  }
+        support-initiatives: {  }
+        support-friends: {  }
+    contact: {  }
+    garbage:
+        about-news: {  }
+        study:
+            study-apply: {  }
+            study-student-life: {  }
+            study-faq: {  }
+            study-information-students: {  }
+            study-student-resources: {  }
+            study-journey: {  }
+            study-aid: {  }
+            study-beyond-studying: {  }
+            study-curriculum: {  }
+            study-faculties: {  }
+            study-aachen: {  }
+            study-overview: {  }
+            study-content: {  }
+            study-structure: {  }
+            study-career: {  }
+            study-your-profile: {  }
+            study-student-support: {  }
+        support-donations: {  }
+        partners:
+            partners-competence-pool: {  }
+            partners-testimontals: {  }
+            partners-aachen: {  }
+        support-newsletter: {  }
+        support-blog: {  }
+        support-volunteers: {  }
+        support-kiron-ventures: {  }
+        support-become-partner: {  }
+        support-faq: {  }
+    index: {  }
+    schoepflin-foundation: {  }

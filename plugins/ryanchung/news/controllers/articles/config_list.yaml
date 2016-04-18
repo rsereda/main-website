@@ -1,0 +1,40 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# List Title
+title: Manage Articles
+modelClass: RyanChung\News\Models\Article
+list: $/ryanchung/news/models/article/columns.yaml
+
+# Link URL for each record
+recordUrl: ryanchung/news/articles/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 100
+
+# Displays the list column set up button
+showSetup: true
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Default sorting column
+defaultSort:
+     column: date
+     direction: DESC
+
+# Display checkboxes next to each record
+# showCheckboxes: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

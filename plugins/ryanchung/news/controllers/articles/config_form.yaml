@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Article
+modelClass: RyanChung\News\Models\Article
+form: $/ryanchung/news/models/article/fields.yaml
+
+# Default redirect location
+defaultRedirect: ryanchung/news/articles
+
+# Create page
+create:
+    title: Create Articles
+    redirect: ryanchung/news/articles/update/:id
+    redirectClose: ryanchung/news/articles
+
+# Update page
+update:
+    title: Edit Articles
+    redirect: ryanchung/news/articles
+    redirectClose: ryanchung/news/articles
+
+# Preview page
+preview:
+    title: Preview Articles

@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    title:
+        label: Title
+        searchable: true
+
+    date:
+        label: Date
+        #format: YYYY/MM/dd
+        #relation: day
+        #select: name
+        

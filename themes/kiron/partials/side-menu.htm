@@ -1,0 +1,10 @@
+==
+    {% for item in items %}
+
+            {% if item.isActive %}
+                {% partial 'side-menu-items' items=items class="nav nav-stacked"  %}
+            {% endif %}
+            {% if item.isChildActive %}
+                {% partial 'side-menu' items=item.items   %}
+            {% endif %}
+    {% endfor %}

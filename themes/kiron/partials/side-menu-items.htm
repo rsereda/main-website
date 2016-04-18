@@ -1,0 +1,18 @@
+==
+<ul class="{{ class }}">
+    {% for item in items %}
+        <li
+            class="{{ item.isActive or item.isChildActive ? 'active' : '' }} {{ item.items ? '' : '' }}"
+        >
+            <a
+                href="{{ item.url }}"
+            >
+                {{ item.title }}
+            </a>
+
+            {% if item.items %}
+                {% partial 'menu-items' items=item.items class='nav nav-stacked' %}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

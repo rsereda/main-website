@@ -1,0 +1,47 @@
+description = "Layout for contact pages"
+
+[staticPage]
+
+[staticMenu]
+code = "top-menu"
+==
+{variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
+
+
+{% partial 'start' %}
+
+<div class="wrapper" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em;">
+
+{% partial "static-topmenu" %}
+
+<!-- Content -->
+<div class="title">
+  <h1>{{titleText | upper }}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div style="margin-bottom: 90px;"></div>
+    <nav class="col-md-3 bs-docs-sidebar">
+        {% partial 'side-menu' items=staticMenu.menuItems class='' %}
+    </nav>
+
+    <div class="col-md-12">
+
+      {% page %}
+
+    </div>
+    <div class="clearfix"></div>
+    <div style="padding-top:160px;"></div>
+
+  </div>
+</div>
+
+</div>
+
+<!-- Share bar -->
+{% partial "sharebar" %}
+
+<!-- Footer -->
+{% partial "footer" %}
+
+{% partial "end" %}

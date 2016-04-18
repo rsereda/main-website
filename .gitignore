@@ -1,0 +1,9 @@
+/vendor/
+dbexport/
+.env
+img/.DS_Store
+themes/wings/pages/mail.htm
+.DS_Store
+node_modules/
+.vagrant/*
+.idea/

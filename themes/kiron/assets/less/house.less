@@ -1,0 +1,382 @@
+// main: bootstrap.less
+
+.house-wrapper{
+    width: 100%;
+    overflow: auto;
+}
+
+.house-container{
+    min-width: 820px;
+}
+
+
+.roof{
+    height:80px;
+    width:100%;
+
+    path{
+        fill:@brand-primary;
+    }
+
+    //border-right: 2px dashed @brand-primary;
+    //padding-left:20px;
+    //padding-right:20px;
+}
+
+.roof-text{
+    color:white;
+    width: 100%;
+    text-align: center;
+    margin-top: -45px;
+    font-weight: bold;
+}
+
+
+.putOnCircle(@nb-items,@circle-size,@item-size){
+    @half-item:    @item-size / 2;
+    @half-parent:  @circle-size / 2;
+
+    position:      relative;
+    width:         @circle-size;
+    height:        @circle-size;
+    padding:       0;
+    border-radius: 50%;
+    list-style:    none;
+    box-sizing:    content-box;
+
+    > * {
+        display:   block;
+        position:  absolute;
+        top:       50%;
+        left:      50%;
+        width:     @item-size;
+        height:    @item-size;
+        margin:    -@half-item;
+
+        @angle:    360/@nb-items;
+        @rot:      0;
+
+        .loop (@index) when (@index > 0){
+            &:nth-of-type(@{index}){
+                @rotN: (@rot+@angle)*@index;
+                -webkit-transform:
+                rotate(@rotN*1deg)
+                translate(@half-parent)
+                rotate(@rotN*-1deg);
+
+                -ms-transform:
+                rotate(@rotN*1deg)
+                translate(@half-parent)
+                rotate(@rotN*-1deg);
+
+                transform:
+                rotate(@rotN*1deg)
+                translate(@half-parent)
+                rotate(@rotN*-1deg);
+
+            }
+            .loop (@index - 1);
+        }
+        .loop(0){}
+            .loop(@nb-items);
+        }
+    }
+    // end mixin, translated from SASS:
+    // http://codepen.io/HugoGiraudel/pen/Bigqr
+
+    // use
+    @bgcolor: white;
+
+
+    .circle-container {
+
+
+
+        .putOnCircle(8, 250px, 40px);
+        border: dashed 2px @brand-primary;
+
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        span {
+            display: block;
+            border-radius: 50%;
+            background-color: @bgcolor;
+            text-align: center;
+            color: darken(@bgcolor,80%);
+
+            line-height: 40px;
+            border: @brand-primary solid 2px;
+        }
+
+
+
+
+        div.step-text{
+            width:200px;
+
+
+            &.top, &.bottom{
+                margin-left: -100px;
+            }
+
+            &.top{
+                margin-top: -50px;
+            }
+
+            &.bottom{
+                margin-top: 23px;
+            }
+
+            &.right{
+                margin-left: 40px;
+            }
+
+            &.left{
+                margin-left: -220px;
+            }
+
+
+
+        }
+
+        #step-text8{
+            margin-left: -230px;
+        }
+
+
+    }
+
+
+
+
+
+    .pillars{
+
+
+
+        max-width: 960px;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @duration: 300ms;
+        @timing-fn: ease;
+        @turquoise: lighten(@brand-primary, 10%);
+        @wet-asphalt: #34495E;
+        @midnight-blue: #2C3E50;
+        @clouds: #ECF0F1;
+
+        /* the important bits */
+        li {
+            //perspective: 400px;
+
+
+        }
+
+
+        @-webkit-keyframes fadeInFromNone {
+            0% {
+                display:none;
+                opacity: 0.3;
+            }
+
+            1% {
+                display: block ;
+                opacity: 0.3;
+            }
+
+            100% {
+                display: block ;
+                opacity: 1;
+            }
+        }
+
+
+
+        .info {
+            // hide-initial-state
+            //transform: rotate3d(1,0,0, 90deg);
+            //-webkit-transform: rotate3d(1,0,0, 90deg);
+            display: none;
+            -webkit-animation-duration: 0.8s;
+            -webkit-animation-name: fadeInFromNone;
+
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+
+            top: 0;
+            left: 0;
+            border-radius: 4px;
+            pointer-events: none;
+            background-color: lighten(@turquoise, .1);
+        }
+
+        li:hover, li:active{
+            .info{
+                display: block;
+            }
+            .normal{
+                display: none;
+            }
+        }
+
+
+        /*.in-top .info {
+        transform-origin: 50% 0%;
+        animation: in-top @duration @timing-fn 0ms 1 forwards;
+    }
+    .in-right .info {
+    transform-origin: 100% 0%;
+    animation: in-right @duration @timing-fn 0ms 1 forwards;
+}
+.in-bottom .info {
+transform-origin: 50% 100%;
+animation: in-bottom @duration @timing-fn 0ms 1 forwards;
+}
+.in-left .info {
+transform-origin: 0% 0%;
+animation: in-left @duration @timing-fn 0ms 1 forwards;
+}
+
+.out-top .info {
+transform-origin: 50% 0%;
+animation: out-top @duration @timing-fn 0ms 1 forwards;
+}
+.out-right .info {
+transform-origin: 100% 50%;
+animation: out-right @duration @timing-fn 0ms 1 forwards;
+}
+.out-bottom .info {
+transform-origin: 50% 100%;
+animation: out-bottom @duration @timing-fn 0ms 1 forwards;
+}
+.out-left .info {
+transform-origin: 0% 0%;
+animation: out-left @duration @timing-fn 0ms 1 forwards;
+}
+
+@keyframes in-top {
+from {transform: rotate3d(-1,0,0, 90deg)}
+to   {transform: rotate3d(0,0,0, 0deg)}
+}
+@keyframes in-right {
+from {transform: rotate3d(0,-1,0, 90deg)}
+to   {transform: rotate3d(0,0,0, 0deg)}
+}
+@keyframes in-bottom {
+from {transform: rotate3d(1,0,0, 90deg)}
+to   {transform: rotate3d(0,0,0, 0deg)}
+}
+@keyframes in-left {
+from {transform: rotate3d(0,1,0, 90deg)}
+to   {transform: rotate3d(0,0,0, 0deg)}
+}
+
+@keyframes out-top {
+from {transform: rotate3d(0,0,0, 0deg)}
+to   {transform: rotate3d(-1,0,0, 104deg)}
+}
+@keyframes out-right {
+from {transform: rotate3d(0,0,0, 0deg)}
+to   {transform: rotate3d(0,-1,0, 104deg)}
+}
+@keyframes out-bottom {
+from {transform: rotate3d(0,0,0, 0deg)}
+to   {transform: rotate3d(1,0,0, 104deg)}
+}
+@keyframes out-left {
+from {transform: rotate3d(0,0,0, 0deg)}
+to   {transform: rotate3d(0,1,0, 104deg)}
+}*/
+
+
+/* you can ignore this ones */
+ul {
+    padding: 0;
+    margin: 0 0 50px;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+li {
+    position: relative;
+    float: left;
+    max-width: 200px;
+    width:20%;
+    //min-width: 150px;
+    height: 200px;
+    padding-right: 5px;
+    list-style: none;
+
+    &.last{
+        padding-right: 0;
+    }
+
+    &.first{
+
+    }
+
+    a  {
+        display: inline-block;
+        vertical-align: top;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+    h3 {
+        padding-top: 0;
+        margin: 0;
+        font-size: 16px;
+        color: lighten(#fff, .1);
+    }
+
+    p  {
+        font-size: 12px;
+        line-height: 1.5;
+        color: lighten(#fff, .2);
+    }
+
+    .normal {
+        width: 100%;
+        height: 100%;
+        background-color: @clouds;
+        color: lighten(@wet-asphalt, .4);
+        box-shadow: inset 0 2px 20px darken(@clouds, 2);
+        text-align: center;
+        font-size: 20px;
+        padding-top: 20px;
+        //line-height: 150px;
+
+
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+h1 {
+    margin: 0 auto 5px;
+    text-align: center;
+}
+
+
+}
+
+
+.foundation{
+    padding: 30px;
+    margin:0;
+}

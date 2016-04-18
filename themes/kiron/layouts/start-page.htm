@@ -1,0 +1,157 @@
+description = "The Layout for the start page"
+
+[StartNewsList]
+
+[staticPage]
+
+[staticMenu]
+code = "top-menu"
+
+[Newslist]
+
+[SubscribeForm]
+==
+{##}
+{% partial 'start' start="true" %}
+
+{% partial "static-topmenu" %}
+
+<!-- Content -->
+
+
+<div class="jumbotron">
+    <div id="splash-carousel" class="carousel slide" data-ride="carousel" data-interval="6000" data-wrap="true" data-pause="true">
+
+      <ol class="carousel-indicators">
+         <li data-target="#splash-carousel" data-slide-to="0" class="active"></li>
+         <li data-target="#splash-carousel" data-slide-to="1"></li>
+         <li data-target="#splash-carousel" data-slide-to="2"></li>
+       </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div id="bg1" class="item active">
+              <div class="overlay">
+                <div class="headings">
+                <img alt="Kiron Open Higher Education" title="Kiron Open Higher Education" src="/img/kir-slider-kiron-open-higher-education@2x.png">
+                <p>World-Class Education For Refugees<br class="hidden-xs">&nbsp;<br class="hidden-xs">&nbsp;</p>
+              </div>
+            </div>
+            </div>
+            <div id="bg2" class="item">
+              <div class="overlay">
+                <div class="headings">
+                <img alt="Kiron" title="Kiron" src="/img/kir-slider-kiron@2x.png">
+                <p>An educational eco-system for already<br class="hidden-xs">1,200 displaced people
+                by combining<br class="hidden-xs">online and offline elements.</p>
+              </div>
+            </div>
+          </div>
+            <div id="bg3" class="item">
+              <div class="overlay">
+                <div class="headings">
+                <img alt="Kiron" title="Kiron" src="/img/schoepflinstiftung_logo@2x.png">
+                <p>
+                  A strong partner on our side:<br class="hidden-xs">
+                  Schöpflin Foundation enables us to give<br class="hidden-xs">5,000 new students a perspective.
+                </p>
+              </div>
+            </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#splash-carousel" role="button" data-slide="prev">
+          <img class="glyphicon glyphicon-chevron-left hidden-xs" aria-hidden="true" alt="prev" src="/img/kir-arrow-left.png"/>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#splash-carousel" role="button" data-slide="next">
+          <img class="glyphicon glyphicon-chevron-right hidden-xs" aria-hidden="true" alt="next" src="/img/kir-arrow-right.png"/>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+<!-- end jumbotron -->
+</div>
+
+  <!--
+  <div class="gic-pop">
+    <div class="row">
+      <div class="col-sm-6" style="position:static;">
+        <div class="logos">
+          <img id="kiron" src="/img/Logo-Word-Blue-400.png" alt="Kiron" title="Kiron" />
+          <img id="gic" src="/img/logo-gic-deutschland.png" alt="Google Impact Challenge | Deutschland" title="Google Impact Challenge | Deutschland"/>
+        </div>
+
+        <div class="gic-text">
+          <p>
+            Contribute to the biggest educational<br>
+            institution for refugees in the world.<br>
+            Contribute to the success story of Kiron.
+          </p>
+          <p>
+            Change the world right now.<br>
+            From wherever you are.
+          </p>
+          <a href="https://impactchallenge.withgoogle.com/deutschland/charity/kiron" target="_blank" class="btn btn-default">Vote for us in the Google Impact Challenge</a>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="video">
+          <div class="youtube-container">
+            <div class="youtube-player" data-id="CNPtN-90jLg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+</div>
+</div>
+
+{% component 'SubscribeForm' %}
+
+
+{repeater name="content_sections" prompt="Add another content section"}
+<div class="teaser {% if loop.index is even %}teaser-right{%endif%}" >
+  <div class="background" style="background-image:url('{mediafinder name="bgi" label="Background Image"}{/mediafinder}');">
+  </div>
+  <div class="overlay">
+  </div>
+  <div class="content">
+    <h4>{text name="title" label="Title"}Title{/text}</h4>
+    <div class="text">
+      {textarea name="content" label="Content"}Content{/textarea}
+    </div>
+    <a href="{text name="buttonlink" label="Button Goes to"}{/text}" class="btn btn-default">{text name="buttontext" label="Button"}Read more{/text}</a>
+  </div>
+</div>
+
+<div class="cite">
+
+
+    {%if fields.authorimage %}
+    <img src="{mediafinder name="authorimage" label="Author Image"}{/mediafinder}" class="img-circle" width=120 height="120"/>
+    {%endif%}
+    <span>&rsaquo;&rsaquo;{text name="cite" label="Cite"}{/text}&lsaquo;&lsaquo;</span>
+    <div class="by">&mdash; {text name="by" label="Author"}{/text}</div>
+    <div class="clearer"></div>
+</div>
+</div>
+
+{/repeater}
+
+
+
+{% partial "sharebar" %}
+
+<div class="clearfix"></div>
+<div style="padding-top:100px;" class="visible-xs"></div>
+
+
+<!-- Footer -->
+{% partial "footer" %}
+
+{% partial 'end' %}

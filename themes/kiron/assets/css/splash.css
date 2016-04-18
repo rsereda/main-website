@@ -1,0 +1,60 @@
+#splash-wrapper {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+#splash-content {
+    float: left;
+    position: relative;
+    left: -50%;
+    vertical-align: middle;
+}
+
+img.splash-img{
+  text-align: left;
+  position: relative;
+  top: 50%;
+}
+
+h1.splash-text{
+  text-align: left;
+  position: relative;
+  top: 50%;
+}
+
+.container #subscribe-button-splash {
+  color: #e64946;
+  background-color:white;
+  border: 3px solid #e64946;
+  max-width: 270px;
+  width: 90%;
+  font-size: 15px;
+  font-weight: bold;
+}
+.container #subscribe-button-splash :hover {
+  background-color: #223f63;
+}
+
+.splash-quotebox{
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:30px;
+  float:left;
+}
+
+.splash-quotebox h2{
+  text-align: center;
+  font-size:25px;
+  font-style:italic;
+}
+
+.splash-quotebox img{
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+  float:left;
+}

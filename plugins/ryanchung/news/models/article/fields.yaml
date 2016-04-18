@@ -1,0 +1,97 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+# label:name
+# span:left/right
+# required:true/false
+# nameFrom:?
+# type:?(select menu)
+# desrciption:
+
+fields:
+
+    title:
+        label: Title
+        span: left
+        required: true
+
+    subtitle:
+        label: SubTitle
+        #required: true
+        #type: relation
+        #nameFrom: name
+        span: right
+
+    description:
+        label: Description
+        type: textarea
+        #nameFrom: name
+        span: left
+        required: true
+
+    img:
+        label: Image
+        type: mediafinder
+        #nameFrom: name
+        span: right
+        required: true
+
+    #workload:
+    #    label: Workload
+    #    type: number
+    #    span: left
+
+    #weeks:
+    #    label: Weeks/Units
+    #    type: number
+    #    span: left
+
+    date:
+        label: Date
+        type: datepicker
+        mode: date
+        span: left
+        required: true
+        
+
+    #rating:
+    #    label: Rating
+    #    span: right
+
+
+    #certificate:
+    #    label: Certificate
+    #    type: checkbox
+    #    default: true
+
+    link:
+        label: Link
+        required: true
+        span: right
+
+
+    language:
+        label: Language
+        required: true
+        #type: relation
+        #nameFrom: name
+        span: left
+
+    source:
+        label: Source
+        span: right
+        required: true
+
+    source-img:
+        label: SourceImage
+        type: mediafinder
+        #nameFrom: name
+        span: left
+        
+
+    country:
+        label: Country
+        #type: relation
+        #nameFrom: name
+        span: right
