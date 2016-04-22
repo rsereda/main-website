@@ -1,7 +1,5 @@
 <?php
 
-Dotenv::required(['LINK_POLICY']);
-
 return [
 
     /*
@@ -98,7 +96,7 @@ return [
     |
     */
 
-    'enableRoutesCache' => !env('DEBUG'),
+    'enableRoutesCache' => !env('DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -138,7 +136,7 @@ return [
     |
     */
 
-    'enableAssetCache' => !env('DEBUG'),
+    'enableAssetCache' => !env('DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -240,7 +238,7 @@ return [
     |
     */
 
-    'linkPolicy' => env('LINK_POLICY'),
+    'linkPolicy' => env('LINK_POLICY', 'secure'),
 
     /*
     |--------------------------------------------------------------------------

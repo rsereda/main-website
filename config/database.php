@@ -1,8 +1,6 @@
 <?php
 
 
-Dotenv::required(['DB_HOST', 'DB_NAME', 'DB_USERNAME', 'DB_PASSWORD', 'REDIS_HOST']);
-
 
 return [
 
@@ -60,11 +58,11 @@ return [
 
     'mysql' => [
       'driver'    => 'mysql',
-      'host'      => env('DB_HOST'),
+      'host'      => env('DB_HOST', 'localhost'),
       'port'      => 3306,
-      'database'  => env('DB_NAME'),
-      'username'  => env('DB_USERNAME'),
-      'password'  => env('DB_PASSWORD'),
+      'database'  => env('DB_NAME', 'mainwebsite'),
+      'username'  => env('DB_USERNAME', 'homestead'),
+      'password'  => env('DB_PASSWORD', 'secret'),
       'charset'   => 'utf8',
       'collation' => 'utf8_unicode_ci',
       'prefix'    => '',
@@ -74,9 +72,9 @@ return [
       'driver'   => 'pgsql',
       'host'     => env('DB_HOST', 'localhost'),
       'port'     => 5432,
-      'database' => env('DB_NAME'),
-      'username' => env('DB_USERNAME', 'forge'),
-      'password' => env('DB_PASSWORD', ''),
+      'database' => env('DB_NAME', 'mainwebsite'),
+      'username' => env('DB_USERNAME', 'homestead'),
+      'password' => env('DB_PASSWORD', 'secret'),
       'charset'  => 'utf8',
       'prefix'   => env('DB_PREFIX', ''),
       'schema'   => 'public',
@@ -123,7 +121,7 @@ return [
       'cluster' => false,
 
       'default' => [
-        'host'     => env('REDIS_HOST'),
+        'host'     => env('REDIS_HOST', '127.0.0.1'),
         'port'     => 6379,
         'database' => 'kiron_october',
       ],

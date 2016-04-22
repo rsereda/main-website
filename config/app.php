@@ -1,6 +1,5 @@
 <?php
 
-Dotenv::required(['DEBUG', 'DOMAIN', 'URL', 'KEY']);
 
 return [
 
@@ -18,7 +17,7 @@ return [
     |
     */
 
-    'debug' => env('DEBUG'),
+    'debug' => env('DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,9 +30,9 @@ return [
     |
     */
 
-    'url' => env('URL'),
+    'url' => env('URL', 'http://main-website.app'),
 
-    'domain' => env('DOMAIN'),
+    'domain' => env('DOMAIN', 'main-website.app'),
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +84,7 @@ return [
     |
     */
 
-    'key' => env('KEY'),
+    'key' => env('KEY', '1yjykn0WLJmdIbelASxDXe5B7kjmGu2k'),
 
     'cipher' => MCRYPT_RIJNDAEL_128,
 
