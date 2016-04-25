@@ -2,7 +2,7 @@
 
 use Backend;
 use System\Classes\PluginBase;
-
+use Symfony\Component\Console\Output\ConsoleOutput;
 /**
 * subscribe Plugin Information File
 */
@@ -25,9 +25,10 @@ class Plugin extends PluginBase
   }
 
   public function register()
-    {
-        set_exception_handler([$this, 'handleException']);
-    }
+  {
+    set_exception_handler([$this, 'handleException']);
+    $this->registerConsoleCommand('kironuniversity.upsg', 'Kironuniversity\Subscribe\Console\UpdateSendGrid');
+  }
 
   public function handleException($e)
   {
@@ -75,6 +76,7 @@ class Plugin extends PluginBase
     ];
   }
 
+
   /**
   * Registers back-end navigation items for this plugin.
   *
@@ -96,10 +98,10 @@ class Plugin extends PluginBase
   }
 
   public function registerMailTemplates()
-{
+  {
     return [
-        'kironuniversity.subscribe::mail.confirm' => 'Activation mail sent to subscribers.',
+      'kironuniversity.subscribe::mail.confirm' => 'Activation mail sent to subscribers.',
     ];
-}
+  }
 
 }
