@@ -4,6 +4,7 @@ use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Output\ConsoleOutput;
+use Kironuniversity\Subscribe\Models\Subscription;
 
 class UpdateSendGrid extends Command
 {
@@ -16,6 +17,14 @@ class UpdateSendGrid extends Command
      * @var string The console command description.
      */
     protected $description = 'Sents the latest subscriptions to sendgrid';
+
+
+    protected function getArguments()
+    {
+        return [
+            ['skip', InputArgument::REQUIRED, 'How many subscriptions should be skipped'],
+        ];
+    }
 
     /**
      * Execute the console command.
@@ -34,8 +43,17 @@ class UpdateSendGrid extends Command
       $guzzleOption['request.options']['headers'] = array('Authorization' => 'Bearer ' . $sendgrid_apikey, 'Content-Type' => 'application/json', 'Accept'=> '*/*');
       $client = new \Guzzle\Http\Client('https://api.sendgrid.com', $guzzleOption);
       $client->setUserAgent('sendgrid/4.0.4;php');
+      $skip = $this->argument('skip');
+      $subscriptions =  Subscription::where('confirmed', '=', 1)->skip($skip)->take(1000)->lists('email');
+      $emails = [];
+      foreach($subscriptions as $email){
+        $emails[] =  ['email' => $email];
+      }
       //$response = $client->get('/v3/contactdb/lists/119096/recipients')->send();
-      $response = $client->post('v3/contactdb/recipients', null, json_encode([['email' => 'christoph.staudt@kiron.ngo']]))->send();
+      $response = $client->post('v3/contactdb/recipients', null, json_encode($emails))->send();
+      //var_dump($response);
+
+
       $response = json_decode($response->getBody());
       echo var_dump($response->persisted_recipients);
       if(is_array($response->persisted_recipients)){
@@ -43,15 +61,6 @@ class UpdateSendGrid extends Command
         var_dump((string)$response2->getBody());
       }
       //echo 'test';
-    }
-
-    /**
-     * Get the console command arguments.
-     * @return array
-     */
-    protected function getArguments()
-    {
-        return [];
     }
 
     /**
