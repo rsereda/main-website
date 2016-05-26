@@ -1,5 +1,6 @@
+[viewBag]
 ==
-    {% for item in items %}
+{% for item in items %}
 
             {% if item.isActive %}
                 {% partial 'side-menu-items' items=items class="nav nav-stacked"  %}

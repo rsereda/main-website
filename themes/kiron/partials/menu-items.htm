@@ -1,3 +1,4 @@
+[viewBag]
 ==
 <ul class="{{ class }}">
     {% for item in items %}
@@ -9,12 +10,8 @@
             >
                 {{ item.title }}
 
-                {% if item.items %}<span class="caret"></span>{% endif %}
             </a>
 
-            {% if item.items %}
-                {% partial 'menu-items' items=item.items class='dropdown-menu' %}
-            {% endif %}
         </li>
     {% endfor %}
 </ul>
