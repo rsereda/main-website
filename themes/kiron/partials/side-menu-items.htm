@@ -1,8 +1,9 @@
+[viewBag]
 ==
 <ul class="{{ class }}">
     {% for item in items %}
         <li
-            class="{{ item.isActive or item.isChildActive ? 'active' : '' }} {{ item.items ? '' : '' }}"
+            class="{{ item.isActive ? 'active' : '' }} {{ item.items ? '' : '' }}"
         >
             <a
                 href="{{ item.url }}"

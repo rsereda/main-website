@@ -1,4 +1,6 @@
 [viewBag]
+
+[staticBreadcrumbs]
 ==
 <?php
 function onStart()
@@ -27,20 +29,21 @@ function onStart()
     <div id="navbar" class="navbar-collapse collapse">
 
       {% partial 'menu-items' items=staticMenu.menuItems class='nav navbar-nav' %}
-
-     <!-- <ul class="nav navbar-nav">
-        <li>
-          <a class="pre-apply" href="/study/apply-admission" >Apply</a>
-        </li>
-        <li>
-          <a class="pre-apply" target="_blank"
-          onclick="goog_report_conversion ('https://www.betterplace.org/de/projects/36608-ermogliche-gefluchteten-ein-studium/donations/new#eft')"
-          href="https://www.betterplace.org/de/projects/36608-ermogliche-gefluchteten-ein-studium/donations/new#eft"> Donate</a>
-        </li>
-      </ul> -->
-
+      
     </div>
 
+          {% if breadcrumbs %}
+            <ul class = "breadcrumb">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+            {% for breadcrumb in breadcrumbs %}
+            <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
+                <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
 
 
   </div>

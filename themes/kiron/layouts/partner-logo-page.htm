@@ -4,8 +4,6 @@ description = "partner-logo-page"
 code = "top-menu"
 
 [staticPage]
-
-[staticBreadcrumbs]
 ==
 {variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
 
@@ -25,16 +23,6 @@ code = "top-menu"
 <div class="container">
   <div class="row">
     <div style="margin-bottom: 90px;"></div>
-
-    {% if breadcrumbs %}
-    <ul class = "breadcrumb">
-        {% for breadcrumb in breadcrumbs %}
-            <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
-                <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
 
     <div class="col-xs-12">
 

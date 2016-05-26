@@ -19,15 +19,15 @@ code = "top-menu"
 <main class="container">
   <div class="row">
     
-    <!-- <nav class="col-md-3 bs-docs-sidebar">
-        {% partial 'side-menu' items=staticMenu.menuItems class='' %}
-    </nav> -->
     <div class="col-md-2"></div>
     <div class="col-md-8">
         
       <h1>{{titleText}}</h1>
       
       {% page %}
+      
+       {% partial 'side-menu' items=staticMenu.menuItems class='' %}
+
       
     </div>
     <div class="col-md-2"></div>
