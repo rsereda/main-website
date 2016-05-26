@@ -5,7 +5,6 @@ description = "Layout for static pages"
 [staticMenu]
 code = "top-menu"
 ==
-
 {variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
 
 
@@ -17,29 +16,25 @@ code = "top-menu"
 
 {% partial "static-topmenu" %}
 
-<!-- Content -->
-<div class="title">
-  <h1>{{titleText}}</h1>
-</div>
-<div class="container">
+<main class="container">
   <div class="row">
-    <div style="margin-bottom: 90px;"></div>
+    
     <!-- <nav class="col-md-3 bs-docs-sidebar">
         {% partial 'side-menu' items=staticMenu.menuItems class='' %}
     </nav> -->
-
-    <div class="col-md-12">
-
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        
+      <h1>{{titleText}}</h1>
+      
       {% page %}
-
+      
     </div>
+    <div class="col-md-2"></div>
     <div class="clearfix"></div>
-    <div style="padding-top:160px;"></div>
-
+    
   </div>
-</div>
-
-</div>
+</main>
 
 <!-- Share bar -->
 {% partial "sharebar" %}
