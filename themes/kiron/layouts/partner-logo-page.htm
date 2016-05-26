@@ -4,6 +4,8 @@ description = "partner-logo-page"
 code = "top-menu"
 
 [staticPage]
+
+[staticBreadcrumbs]
 ==
 {variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
 
@@ -18,29 +20,42 @@ code = "top-menu"
 <div class="title">
   <h1>{{titleText }}</h1>
 </div>
+
+
 <div class="container">
   <div class="row">
     <div style="margin-bottom: 90px;"></div>
+
+    {% if breadcrumbs %}
+    <ul class = "breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+            <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
+                <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
     <div class="col-xs-12">
 
       {% page %}
-      
+
       <div class="row">
         {repeater name="logos" prompt="Add another Logo"}
-    
-       
+
+
        <div style="margin-top:20px;margin-left:10px;margin-right:20px;" class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-        
+
         <img src="
             {mediafinder name="logo" label="Logo"}{/mediafinder}
         "/>
         {%if loop.index is even %}
           </div><div class="row">
          {% endif %}
-        
+
         </div>
         {/repeater}
-       </div>   
+       </div>
 
     </div>
     <div class="clearfix"></div>
