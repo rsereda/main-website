@@ -5,7 +5,7 @@
 ### usage #################################
 ### export CSV of donors from drive (maintained by Johannes)
 ### put that into this folder.
-### ../list_sponsor.py filename.csv/ > ../themes/kiron/partials/sponsors.htm
+### ./list_sponsor.py filename.csv > ../themes/kiron/partials/sponsors.htm
 ### that should automatically update the snippet. Check at:
 ### https://main-website.app/support/supporters
 #####################################
