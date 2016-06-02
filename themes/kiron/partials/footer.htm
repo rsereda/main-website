@@ -2,6 +2,8 @@
 
 [SubscribeForm]
 ==
+{% component 'SubscribeForm' %}
+
 <footer>
 
     <div id="social-media-container">
@@ -22,51 +24,35 @@
         </ul>
     </div>
 
-        {% component 'SubscribeForm' %}
-
-    <div class="container">
         
-      <img src="kiron-Logo-UNI-White.svg" alt="Kiron OHE"
+
+    <div class="container-fluid">
+   
         <div class="row">
-            <div class="col-xs-4 col-xs-offset-1 col-sm-5">
-                Kiron Open Higher Education gGmbH
-              </div>
-              <div class="col-xs-4 col-xs-offset-1 col-sm-5">
-                <a href="/contact" id="impressum-link" class="contact-link">Jobs</a><br />
-              </div>
-              </div>
-              <div class="row">
-
-              <div class="col-xs-4 col-xs-offset-1 col-sm-5">
-                Palais am Festungsgraben
-              </div>
-              <div class="col-xs-4 col-xs-offset-1 col-sm-5">
-                <a href="/contact" id="impressum-link" class="contact-link">Donate</a><br />
-              </div>
-              </div>
-              <div class="row">
-
-              <div class="col-xs-4 col-xs-offset-1 col-sm-5">
-                Am Festungsgraben 1
-              </div>
-              <div class="col-xs-4 col-xs-offset-1 col-sm-5">
-                <a href="/contact" id="impressum-link" class="contact-link">Legal</a><br />
-              </div>
-
-              </div>
-              <div class="row">
-
-              <div class="col-xs-4 col-xs-offset-1 col-sm-5">
-                10117 Berlin
-              </div>
-              <div class="col-xs-4 col-xs-offset-1 col-sm-5">
-                <a href="/contact" id="impressum-link" class="contact-link">Press</a><br />
-              </div>
+            <div class="col-sm-6">
+                <img src="/storage/app/media/kiron-logos/kiron-Logo-UNI-White.svg" alt="Kiron OHE" class='logo' />
             </div>
-
+            <div class='col-sm-4'>
+                <ul>
+                    <li>Kiron Open Higher Education gGmbH</li>
+                    <li>Palais am Festungsgraben</li>
+                    <li>Am Festungsgraben 1</li>
+                    <li>10117 Berlin</li>
+                </ul>
+                
             </div>
-        </div>
-    </div>
+            <div class='col-sm-2'>
+                <ul>
+                    <li><a href="/contact" id="impressum-link" class="contact-link">Jobs</a></li>
+                    <li><a href="/contact" id="impressum-link" class="contact-link">Donate</a></li>
+                    <li><a href="/contact" id="impressum-link" class="contact-link">Legal</a></li>
+                    <li><a href="/contact" id="impressum-link" class="contact-link">Press</a></li>
+                </ul>
+            </div> <!-- col -->
+            
+        </div><!-- row -->
+        
+    </div> <!-- container -->
 </footer>
 
 

@@ -133,6 +133,9 @@ div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -
     .carousel-control{
       background: none;
       opacity: 0.75;
+      .glyphicon-chevron-left, .glyphicon-chevron-right {
+        display: none;
+      }
     }
 
     .carousel-control:hover{
@@ -176,6 +179,9 @@ div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -
 
 
 @media (min-width: @screen-sm-min) {
+  body.start-page {
+    padding-top: @navbar-height;
+  }
   .jumbotron {
 
     .item{
@@ -183,7 +189,7 @@ div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -
     }
 
 
-    height: 80%;
+    height:~"calc(100vh - 80px)";
 
     padding:0;
     background: none;
@@ -242,7 +248,7 @@ div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -
 
     .headings {
       position: absolute;
-      bottom:100px;
+      bottom: 100px;
       left: 50%;
       .transform(translateX(-50%));
       img {
@@ -337,22 +343,22 @@ div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -
 }
 
 .container-subscription{
-  max-width: 1080px;
+  background-color: #f4f5f6;
 }
 
 
 .subscription-form{
-  background-color: #f4f5f6;
+
   text-align: center;
   padding: 40px;
-  margin: 60px 0;
+  margin: 0px 0;
 
   .heading{
     font-size:18px;
     margin:0;
     margin-top: 5px;
     margin-bottom: 20px;
-    color:@link-color;
+    color:@kironRed;
   }
 
 
@@ -363,7 +369,7 @@ div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -
   input{
     .box-shadow(0,0,0,0);
     border: none;
-    border-bottom: 1px solid @link-color;
+    border-bottom: 1px solid @kironRed;
     padding: 5px;
     padding-left: 10px;
     line-height: 1;
@@ -393,7 +399,7 @@ div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -
 
   input:focus{
     .box-shadow(0,0,0,0);
-    border-bottom: 2px solid @link-color;
+    border-bottom: 2px solid @kironRed;
     margin-bottom: -1px;
   }
 

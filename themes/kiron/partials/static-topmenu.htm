@@ -12,7 +12,7 @@ function onStart()
 ?>
 ==
 <div class="navbar navbar-default navbar-fixed-top" id="headnav" role="navigation">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-header navbar-left">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -26,25 +26,30 @@ function onStart()
 
     </div>
 
-    <div id="navbar" class="navbar-collapse collapse">
+    <nav id="navbar" class="navbar-collapse collapse">
 
       {% partial 'menu-items' items=staticMenu.menuItems class='nav navbar-nav' %}
-      
-    </div>
 
-          {% if breadcrumbs %}
-            <ul class = "breadcrumb">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-            {% for breadcrumb in breadcrumbs %}
-            <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
-                <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
-            </li>
-        {% endfor %}
-        </ul>
-        {% endif %}
-
-
+    </nav>
   </div>
+            {% if breadcrumbs %}
+            <div class='breadcrumb-nav'>
+            <div class='container'>
+                <div class="row">
+                <div class='col-md-2'></div>
+                <ul class = "breadcrumb col-md-8">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                {% for breadcrumb in breadcrumbs %}
+                <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
+                    <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+                </li>
+                {% endfor %}
+                </ul>
+                <div class='col-md-2'></div>
+                </div>
+            </div>
+            </div>
+        {% endif %}
 </div>

@@ -3,7 +3,17 @@
 //
 // Typography
 // --------------------------------------------------
+main p a, main li a {
 
+  color: @kironBlue;
+  border-bottom: 1px solid @kironGreen;
+}
+
+main p a:hover, main li a:hover {
+  color: @kironRed;
+  text-decoration: none;
+  border-bottom: 0px solid @kironGreen;
+}
 .title {
   background-color: transparent;
 }
@@ -13,10 +23,10 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: @headings-font-family;
-  font-weight: @headings-font-weight;
-  line-height: @headings-line-height;
-  color: @headings-color;
+  font-family: 'Fayon', sans-serif;
+  font-weight: normal;
+  line-height: 1em;
+  color: @kironBlue;
 
   small,
   .small {
@@ -40,8 +50,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: (@line-height-computed / 2);
-  margin-bottom: (@line-height-computed / 2);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 
   small,
   .small {
@@ -56,7 +66,7 @@ h4, .h4 { font-size: @font-size-h4; }
 h5, .h5 { font-size: @font-size-h5; }
 h6, .h6 { font-size: @font-size-h6; }
 
-h1 {
+h1,h2,h3 {
   font-family: 'Fayon', sans-serif;
   color: @brand-primary;
   line-height: 1em;
@@ -66,6 +76,25 @@ h1 {
 
 // Body text
 // -------------------------
+
+main ul, main ol {
+  color: @kironBlue;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  list-style: inherit;
+  li {
+    line-height: 1.3em;
+    margin-bottom: 0.75em;
+  }
+}
+
+main ul {
+    list-style-type: disc;
+}
+
+main ol {
+    list-style-type: decimal;
+}
 
 p {
   margin: 0 0 1em;
@@ -90,7 +119,7 @@ p {
     color: @brand-primary;
 }
 
-p strong {
+p strong, h4 {
   font-family: 'Fayon', serif;
   font-size: 1.05rem;
   line-height: 1.3em;

@@ -24,6 +24,12 @@
 @brand-primary-dark:    #004a75;
 
 
+@kironBlue: rgb(0,30,140);
+@kironGreen: rgb(10,220,180);
+@kironOrange: rgb(250,175,30);
+@kironRed: rgb(235,20,70);
+
+
 
 
 
@@ -51,7 +57,7 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color: #e64946;
+@link-color: @kironRed;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
@@ -74,9 +80,9 @@
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
 @font-size-h1:            floor((@font-size-base * 2.2)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h2:            floor((@font-size-base * 2.2)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 2.2)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.05)); // ~18px
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
@@ -167,8 +173,8 @@
 @btn-font-weight:                500;
 
 @btn-default-color:              #fff;
-@btn-default-bg:                 @link-color;
-@btn-default-border:             @link-color;
+@btn-default-bg:                 @kironRed;
+@btn-default-border:             @kironRed;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -808,7 +814,7 @@
 //== Breadcrumbs
 //
 //##
-
+@breadcrumbs-height:            38px;
 @breadcrumb-padding-vertical:   8px;
 @breadcrumb-padding-horizontal: 15px;
 //** Breadcrumb background color
@@ -818,7 +824,7 @@
 //** Text color of current page in the breadcrumb
 @breadcrumb-active-color:       @gray-light;
 //** Textual separator for between breadcrumb elements
-@breadcrumb-separator:          "/";
+@breadcrumb-separator:          "\203A";
 
 
 //== Carousel
