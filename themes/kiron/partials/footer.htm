@@ -1,5 +1,9 @@
 [viewBag]
+
+[SubscribeForm]
 ==
+{% component 'SubscribeForm' %}
+
 <footer>
 
     <div id="social-media-container">
@@ -20,16 +24,35 @@
         </ul>
     </div>
 
-    <div class="container">
+        
+
+    <div class="container-fluid">
+   
         <div class="row">
-            <div class="col-sm-4">
-                &copy; 2015 <strong>Kiron</strong>
+            <div class="col-sm-6">
+                <img src="/storage/app/media/kiron-logos/kiron-Logo-UNI-White.svg" alt="Kiron OHE" class='logo' />
             </div>
-            <div id="impressum-container" class="col-sm-5 col-sm-offset-3">
-                <a href="/contact" id="impressum-link" class="contact-link">Contact & Imprint</a>
+            <div class='col-sm-4'>
+                <ul>
+                    <li>Kiron Open Higher Education gGmbH</li>
+                    <li>Palais am Festungsgraben</li>
+                    <li>Am Festungsgraben 1</li>
+                    <li>10117 Berlin</li>
+                </ul>
+                
             </div>
-        </div>
-    </div>
+            <div class='col-sm-2'>
+                <ul>
+                    <li><a href="/contact" id="impressum-link" class="contact-link">Jobs</a></li>
+                    <li><a href="/contact" id="impressum-link" class="contact-link">Donate</a></li>
+                    <li><a href="/contact" id="impressum-link" class="contact-link">Legal</a></li>
+                    <li><a href="/contact" id="impressum-link" class="contact-link">Press</a></li>
+                </ul>
+            </div> <!-- col -->
+            
+        </div><!-- row -->
+        
+    </div> <!-- container -->
 </footer>
 
 

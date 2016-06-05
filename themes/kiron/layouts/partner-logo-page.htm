@@ -14,42 +14,40 @@ code = "top-menu"
 
 {% partial "static-topmenu" %}
 
-<!-- Content -->
-<div class="title">
-  <h1>{{titleText }}</h1>
-</div>
-<div class="container">
+<main class="container">
   <div class="row">
-    <div style="margin-bottom: 90px;"></div>
-    <div class="col-xs-12">
+
+     <div class="col-md-2"></div>
+     <div class="col-md-8">
+        
+      <h1>{{titleText}}</h1>
 
       {% page %}
-      
+
       <div class="row">
         {repeater name="logos" prompt="Add another Logo"}
-    
-       
-       <div style="margin-top:20px;margin-left:10px;margin-right:20px;" class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-        
+
+
+       <div style="margin-top:60px;margin-left:20px;margin-right:30px;" class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
         <img src="
             {mediafinder name="logo" label="Logo"}{/mediafinder}
         "/>
         {%if loop.index is even %}
           </div><div class="row">
          {% endif %}
-        
+
         </div>
         {/repeater}
-       </div>   
+       </div>
 
     </div>
+    <div class="col-md-2"></div>
     <div class="clearfix"></div>
     <div style="padding-top:160px;"></div>
 
   </div>
-</div>
-
-</div>
+</main>
 
 <!-- Share bar -->
 {% partial "sharebar" %}

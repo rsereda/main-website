@@ -137,12 +137,14 @@
 }
 
 #navbar {
+
     a {
         font-size: 18px;
         //letter-spacing: 0.05em;
 
         color: @brand-primary;
-
+			padding-left:1rem;
+			padding-right: 1rem;
         .font-smoothing;
     }
 
@@ -150,14 +152,17 @@
         color: @link-color;
     }
 
-
+		li:last-child a {
+			margin-right: 1rem;
+		}
 
     ul li.active{
       ul li a{
         text-decoration: none;
       }
       a{
-      text-decoration: underline;
+      	color: @kironRed;
+				text-decoration: none;
       }
     }
 
@@ -212,14 +217,32 @@
 
 }
 
+// Base class
+// --------------------------------------------------
+
+#navbar {
+
+
+ a{
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: @kironRed;
+				background-color: transparent;
+      }
+  }
+	.special-cta a {
+		color: @kironGreen;
+	}
+}
+
+
+
 @media (min-width: @screen-sm-min) {
         .navbar-brand {
             min-height: @navbar-shrinked-height;
             height: @navbar-shrinked-height;
             margin-left: 0 !important;
         }
-}
-
-#logo {
-    width: @navbar-height+1;
 }

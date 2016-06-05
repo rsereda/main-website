@@ -8,8 +8,6 @@ description = "The Layout for the start page"
 code = "top-menu"
 
 [Newslist]
-
-[SubscribeForm]
 ==
 {##}
 {% partial 'start' start="true" %}
@@ -76,82 +74,21 @@ code = "top-menu"
 <!-- end jumbotron -->
 </div>
 
-  <!--
-  <div class="gic-pop">
-    <div class="row">
-      <div class="col-sm-6" style="position:static;">
-        <div class="logos">
-          <img id="kiron" src="/img/Logo-Word-Blue-400.png" alt="Kiron" title="Kiron" />
-          <img id="gic" src="/img/logo-gic-deutschland.png" alt="Google Impact Challenge | Deutschland" title="Google Impact Challenge | Deutschland"/>
-        </div>
+  
+</div>
+</div>
 
-        <div class="gic-text">
-          <p>
-            Contribute to the biggest educational<br>
-            institution for refugees in the world.<br>
-            Contribute to the success story of Kiron.
-          </p>
-          <p>
-            Change the world right now.<br>
-            From wherever you are.
-          </p>
-          <a href="https://impactchallenge.withgoogle.com/deutschland/charity/kiron" target="_blank" class="btn btn-default">Vote for us in the Google Impact Challenge</a>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="video">
-          <div class="youtube-container">
-            <div class="youtube-player" data-id="CNPtN-90jLg"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!--
+<div class="clearfix"></div>
+<div style="padding-top:100px;" class="visible-xs"></div>
 -->
-</div>
-</div>
-
-{% component 'SubscribeForm' %}
-
-
-{repeater name="content_sections" prompt="Add another content section"}
-<div class="teaser {% if loop.index is even %}teaser-right{%endif%}" >
-  <div class="background" style="background-image:url('{mediafinder name="bgi" label="Background Image"}{/mediafinder}');">
-  </div>
-  <div class="overlay">
-  </div>
-  <div class="content">
-    <h4>{text name="title" label="Title"}Title{/text}</h4>
-    <div class="text">
-      {textarea name="content" label="Content"}Content{/textarea}
-    </div>
-    <a href="{text name="buttonlink" label="Button Goes to"}{/text}" class="btn btn-default">{text name="buttontext" label="Button"}Read more{/text}</a>
-  </div>
-</div>
-
-<div class="cite">
-
-
-    {%if fields.authorimage %}
-    <img src="{mediafinder name="authorimage" label="Author Image"}{/mediafinder}" class="img-circle" width=120 height="120"/>
-    {%endif%}
-    <span>&rsaquo;&rsaquo;{text name="cite" label="Cite"}{/text}&lsaquo;&lsaquo;</span>
-    <div class="by">&mdash; {text name="by" label="Author"}{/text}</div>
-    <div class="clearer"></div>
-</div>
-</div>
-
-{/repeater}
-
 
 
 {% partial "sharebar" %}
 
-<div class="clearfix"></div>
-<div style="padding-top:100px;" class="visible-xs"></div>
-
-
 <!-- Footer -->
+
+
 {% partial "footer" %}
 
 {% partial 'end' %}
