@@ -28,8 +28,13 @@ lang="en-EN"
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title itemprop="name">Kiron - {{ this.page.title }}</title>
-	<meta name="title" content="{{ this.page.meta_title }}">
+	{% if post %}
+	    <title itemprop="name">Kiron - {{ post.title }}</title>
+        <meta name="title" content="{{ post.title }}">
+    {% else %}
+        <title itemprop="name">Kiron - {{ this.page.title }}</title>
+        <meta name="title" content="{{ this.page.meta_title }}">
+    {% endif %}
 
 	{% content 'seo/en.htm' %}
 
@@ -51,4 +56,5 @@ lang="en-EN"
 	<script>{{js |raw}}</script>
 
 </head>
+
 <body class='{{ this.page.layout }}'>
