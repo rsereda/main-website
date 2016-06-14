@@ -2,14 +2,8 @@ title = "Blog Category"
 url = "/blog/category/:slug"
 layout = "title-text-static"
 is_hidden = 0
-
-[GenContent]
-start = "id-3"
-activeNode = 0
-listItemClasses = "item"
-primaryClasses = "nav nav-pills"
-secondaryClasses = "dropdown-menu"
-numberOfLevels = 3
+robot_index = "index"
+robot_follow = "follow"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
@@ -17,8 +11,8 @@ categoryFilter = "{{ :slug }}"
 postsPerPage = 10
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
-categoryPage = 404
-postPage = 404
+categoryPage = "blog-category"
+postPage = "blog-post"
 
 [blogCategories]
 slug = "{{ :slug }}"
@@ -26,7 +20,7 @@ displayEmpty = 0
 categoryPage = "blog/category"
 
 [staticMenu]
-code = "top-menu"
+code = "new-top"
 
 [staticPage]
 ==

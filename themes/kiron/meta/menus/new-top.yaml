@@ -1,0 +1,78 @@
+name: 'New Top'
+items:
+    -
+        title: About
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: about
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'About Childs'
+                nesting: '1'
+                type: static-page
+                code: ''
+                reference: about
+                replace: '1'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Blog
+                type: cms-page
+                code: ''
+                reference: blog
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Kiron World'
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: kiron-world
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Study
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: study2
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Support Us'
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: support
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Contact
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: contact
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
