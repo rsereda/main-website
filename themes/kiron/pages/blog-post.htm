@@ -33,8 +33,15 @@ function onEnd()
 }
 ?>
 ==
-{% component 'SeoBlogPost' %}
+{% component 'SeoBlogPost' data=post %}
+
+
+
+{% put meta %}
+    <meta type="blabla" />
+{% endput %}
 {% if post %}
+    
     <h2>{{ post.title }}</h2>
 
     {% set post = blogPost.post %}

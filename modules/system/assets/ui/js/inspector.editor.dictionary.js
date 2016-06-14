@@ -1,5 +1,5 @@
 /*
- * Inspector dictionary editor class.
+ * Inspector text editor class.
  */
 +function ($) { "use strict";
 
