@@ -25,6 +25,9 @@ linkedin = 1
 post = "post"
 ==
 <?php
+function onInit(){
+    $this['breadcrumbs'] = [['isActive' => 1, 'title' => 'About', 'url' => '/about'],['isActive' => 0, 'title' => 'Blog', 'url' => '/blog']];
+}
 function onEnd()
 {
     // Optional - set the page title to the post title
