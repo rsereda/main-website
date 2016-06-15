@@ -2,23 +2,27 @@ title = "Blog Post"
 url = "/blog/post/:slug"
 layout = "title-text-static"
 is_hidden = 0
-
-[GenContent]
-start = "id-3"
-activeNode = 0
-listItemClasses = "item"
-primaryClasses = "nav nav-pills"
-secondaryClasses = "dropdown-menu"
-numberOfLevels = 3
+robot_index = "index"
+robot_follow = "follow"
 
 [blogPost]
 slug = "{{ :slug }}"
-categoryPage = 404
+categoryPage = "blog-category"
 
 [staticMenu]
-code = "top-menu"
+code = "new-top"
 
 [staticPage staticPage2]
+
+[ssbuttons]
+twitter = 1
+facebook = 1
+google+ = 1
+stumbleupon = 1
+linkedin = 1
+
+[SeoBlogPost]
+post = "post"
 ==
 <?php
 function onEnd()
@@ -29,10 +33,52 @@ function onEnd()
 }
 ?>
 ==
+{% component 'SeoBlogPost' data=post %}
+
+
+
+{% put meta %}
+    <meta type="blabla" />
+{% endput %}
 {% if post %}
+    
     <h2>{{ post.title }}</h2>
 
-    {% component 'blogPost' %}
+    {% set post = blogPost.post %}
+
+<div class="content">{{ post.content_html|raw }}</div>
+
+{% if post.featured_images.count %}
+    <div class="featured-images text-center">
+        {% for image in post.featured_images %}
+            <p>
+                <img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+            </p>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<p class="info">
+    Posted
+    {% if post.categories.count %} in
+        {% for category in post.categories %}
+            <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    {% endif %}
+    on {{ post.published_at|date('M d, Y') }}
+</p>
+
 {% else %}
     <h2>Post not found</h2>
 {% endif %}
+
+<div class="SocialSharingButtons">
+    Share on: 
+    {% if(ssbuttons.property('twitter'))     %}<a href="http://twitter.com/home?status={{ (post.title ~ ' ' ~ url_current())|url_encode }}" title="Share on Twitter" target="_blank" class="btn btn-default"><i class="icon icon-twitter"></i> Twitter</a>{% endif %}
+    {% if(ssbuttons.property('facebook'))    %}<a href="https://www.facebook.com/sharer/sharer.php?u={{ url_current()|url_encode }}" title="Share on Facebook" target="_blank" class="btn btn-default"><i class="icon icon-facebook"></i> Facebook</a>{% endif %}
+    {% if(ssbuttons.property('google+'))     %}<a href="https://plus.google.com/share?url={{ (post.title ~ ' ' ~ url_current())|url_encode }}" title="Share on Google+" target="_blank" class="btn btn-default"><i class="icon icon-google-plus"></i> Google+</a>{% endif %}
+</div>
