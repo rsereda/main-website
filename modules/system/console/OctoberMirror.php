@@ -26,6 +26,7 @@ class OctoberMirror extends Command
     protected $description = '(Experimental) Generates a mirrored public folder using symbolic links.';
 
     protected $files = [
+        '.htaccess',
         'index.php',
         'favicon.ico',
         'robots.txt',
@@ -43,9 +44,11 @@ class OctoberMirror extends Command
         'modules/*/behaviors/*/assets',
         'modules/*/widgets/*/assets',
         'modules/*/formwidgets/*/assets',
+        'modules/*/reportwidgets/*/assets',
 
         'plugins/*/*/assets',
         'plugins/*/*/behaviors/*/assets',
+        'plugins/*/*/reportwidgets/*/assets',
         'plugins/*/*/formwidgets/*/assets',
         'plugins/*/*/widgets/*/assets',
 

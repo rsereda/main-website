@@ -29,9 +29,7 @@
     "october/backend": "dev-develop",
     "october/cms": "dev-develop",
     "laravel/framework": "5.1.*",
-    "illuminate/html": "5.0.*",
-    "symfony/dom-crawler": "^3.0@dev",
-    "symfony/css-selector": "~2.8|~3.0"
+    "illuminate/html": "5.0.*"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0",

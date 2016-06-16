@@ -12,6 +12,12 @@ return [
         'delete_success' => ':count şablon başarıyla silindi.',
         'file_name_required' => 'Dosya adı alanı gereklidir.'
     ],
+    'dashboard' => [
+        'active_theme' => [
+            'online' => 'yayında',
+            'maintenance' => 'bakım modunda',
+        ]
+    ],
     'theme' => [
         'not_found_name' => "':name' isimli tema bulunamadı.",
         'active' => [
@@ -265,6 +271,7 @@ return [
         'multiple_selected' => 'Birden fazla öğe seçildi.',
         'uploading_file_num' => ':number adet dosya yükleniyor...',
         'uploading_complete' => 'Yükleme tamamlandı',
+        'uploading_error' => 'Yükleme hatası',
         'order_by' => 'Sırala',
         'folder' => 'Klasör',
         'no_files_found' => 'İsteğiniz doğrultusunda hiçbir dosya bulunamadı.',
