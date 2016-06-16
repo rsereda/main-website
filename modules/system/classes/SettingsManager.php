@@ -124,7 +124,7 @@ class SettingsManager
          */
         $catItems = [];
         foreach ($this->items as $item) {
-            $category = $item->category ?: self::CATEGORY_MISC;
+            $category = $item->category ?: 'Misc';
             if (!isset($catItems[$category])) {
                 $catItems[$category] = [];
             }

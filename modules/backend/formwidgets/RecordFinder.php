@@ -54,11 +54,6 @@ class RecordFinder extends FormWidgetBase
     public $prompt = 'Click the %s button to find a record';
 
     /**
-     * @var int Maximum rows to display for each page.
-     */
-    public $recordsPerPage = 10;
-
-    /**
      * @var string Use a custom scope method for the list query.
      */
     public $scope;
@@ -120,7 +115,6 @@ class RecordFinder extends FormWidgetBase
             'conditions',
             'searchMode',
             'searchScope',
-            'recordsPerPage',
         ]);
 
         if (post('recordfinder_flag')) {
@@ -247,7 +241,7 @@ class RecordFinder extends FormWidgetBase
         $config->alias = $this->alias . 'List';
         $config->showSetup = false;
         $config->showCheckboxes = false;
-        $config->recordsPerPage = $this->recordsPerPage;
+        $config->recordsPerPage = 10;
         $config->recordOnClick = sprintf("$('#%s').recordFinder('updateRecord', this, ':" . $this->keyFrom . "')", $this->getId());
         $widget = $this->makeWidget('Backend\Widgets\Lists', $config);
 

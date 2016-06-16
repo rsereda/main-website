@@ -1031,8 +1031,8 @@ class Form extends WidgetBase
 
             $methodName = 'get'.studly_case($attribute).'Options';
             if (
-                !$this->objectMethodExists($model, $methodName) &&
-                !$this->objectMethodExists($model, 'getDropdownOptions')
+                !$this->methodExists($model, $methodName) &&
+                !$this->methodExists($model, 'getDropdownOptions')
             ) {
                 throw new ApplicationException(Lang::get(
                     'backend::lang.field.options_method_not_exists',
@@ -1040,7 +1040,7 @@ class Form extends WidgetBase
                 ));
             }
 
-            if ($this->objectMethodExists($model, $methodName)) {
+            if ($this->methodExists($model, $methodName)) {
                 $fieldOptions = $model->$methodName($field->value);
             }
             else {
@@ -1051,7 +1051,7 @@ class Form extends WidgetBase
          * Field options are an explicit method reference
          */
         elseif (is_string($fieldOptions)) {
-            if (!$this->objectMethodExists($this->model, $fieldOptions)) {
+            if (!$this->methodExists($this->model, $fieldOptions)) {
                 throw new ApplicationException(Lang::get(
                     'backend::lang.field.options_method_not_exists',
                     ['model'=>get_class($this->model), 'method'=>$fieldOptions, 'field'=>$field->fieldName]
@@ -1099,7 +1099,7 @@ class Form extends WidgetBase
      * @param  string $method
      * @return boolean
      */
-    protected function objectMethodExists($object, $method)
+    protected function methodExists($object, $method)
     {
         if (method_exists($object, 'methodExists')) {
             return $object->methodExists($method);

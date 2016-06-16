@@ -14,3 +14,8 @@
 1.0.9: Fixes an issue where newly created models lose their translated values.
 1.0.10: Minor fix for latest build.
 1.0.11: Fix multilingual rich editor when used in stretch mode.
+1.1.0: Introduce compatibility with RainLab.Pages plugin.
+1.1.1: Minor UI fix to the language picker.
+1.1.2: Add support for translating Static Content files.
+1.1.3: Improved support for the multilingual rich editor.
+1.1.4: Adds new multilingual markdown editor.

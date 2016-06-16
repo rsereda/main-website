@@ -9,6 +9,11 @@
         this.$form = null
 
         /*
+         * Table toolbar
+         */
+        this.tableToolbar = null
+
+        /*
          * Input with the "from" locale value
          */
         this.fromInput = null
@@ -29,9 +34,9 @@
         this.toHeader = null
 
         /*
-         * The element with .dataGrid() bound to it
+         * The table widget element
          */
-        this.gridElement = null
+        this.tableElement = null
 
         /*
          * Hide translated strings (show only from the empty data set)
@@ -46,44 +51,51 @@
 
         $(document).on('change', '#hideTranslated', function(){
             self.toggleTranslated($(this).is(':checked'))
-            self.filterDataSet()
+            self.refreshTable()
         });
 
         this.toggleTranslated = function(isHide) {
-            this.gridElement.dataGrid('deselect')
             this.hideTranslated = isHide
             this.setTitleContents()
         }
 
-        this.filterDataSet = function() {
-            if (!this.hideTranslated) {
-                if (this.dataSet) this.gridElement.dataGrid('setData', this.dataSet)
+        this.setToolbarContents = function(tableToolbar) {
+            if (tableToolbar) this.tableToolbar = $(tableToolbar)
+            if (!this.tableElement) return
+
+            var $toolbar = $('.toolbar', this.tableElement)
+            if ($toolbar.hasClass('message-buttons-added')) {
                 return
             }
 
-            this.dataSet = this.gridElement.dataGrid('getData')
-            this.emptyDataSet = $.grep(this.dataSet, function(obj, index){
-                return !obj.to
-            })
-
-            this.gridElement.dataGrid('setData', this.emptyDataSet)
+            $toolbar.addClass('message-buttons-added')
+            $toolbar.prepend(Mustache.render(this.tableToolbar.html()))
         }
 
         this.setTitleContents = function(fromEl, toEl) {
             if (fromEl) this.fromHeader = $(fromEl)
             if (toEl) this.toHeader = $(toEl)
-            if (!this.gridElement) return
+            if (!this.tableElement) return
 
-            this.gridElement.dataGrid('setHeaderValue', 0, this.fromHeader.html())
-            this.gridElement.dataGrid('setHeaderValue', 1, Mustache.render(this.toHeader.html(), { hideTranslated: this.hideTranslated } ))
-            this.gridElement.dataGrid('updateUi')
+            var $headers = $('table.headers th', this.tableElement)
+            $headers.eq(0).html(this.fromHeader.html())
+            $headers.eq(1).html(Mustache.render(this.toHeader.html(), { hideTranslated: this.hideTranslated } ))
         }
 
-        this.setGridElement = function(el) {
-            this.gridElement = $(el)
+        this.setTableElement = function(el) {
+            this.tableElement = $(el)
             this.$form = $('#messagesForm')
             this.fromInput = this.$form.find('input[name=locale_from]')
             this.toInput = this.$form.find('input[name=locale_to]')
+
+            this.tableElement.one('oc.tableUpdateData', $.proxy(this.updateTableData, this))
+        }
+
+        this.updateTableData = function(event, records) {
+            if (this.hideTranslated && !records.length) {
+                self.toggleTranslated($(this).is(':checked'))
+                self.refreshTable()
+            }
         }
 
         this.toggleDropdown = function(el) {
@@ -112,8 +124,11 @@
         }
 
         this.refreshGrid = function() {
-            this.gridElement.dataGrid('setData', [])
             this.$form.request('onRefresh')
+        }
+
+        this.refreshTable = function() {
+            this.tableElement.table('updateDataTable')
         }
 
     }

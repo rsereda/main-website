@@ -5,14 +5,13 @@ use RainLab\Translate\Models\Locale;
 
 /**
  * ML Rich Editor
- * Renders a multi-lingual WYSIWYG edtiro.
+ * Renders a multi-lingual WYSIWYG editor.
  *
  * @package rainlab\translate
  * @author Alexey Bobkov, Samuel Georges
  */
 class MLRichEditor extends RichEditor
 {
-
     use \RainLab\Translate\Traits\MLControl;
 
     /**
@@ -41,8 +40,9 @@ class MLRichEditor extends RichEditor
         $parentContent = parent::render();
         $this->actAsParent(false);
 
-        if (!$this->isAvailable)
+        if (!$this->isAvailable) {
             return $parentContent;
+        }
 
         $this->vars['richeditor'] = $parentContent;
         return $this->makePartial('mlricheditor');
@@ -57,7 +57,7 @@ class MLRichEditor extends RichEditor
     /**
      * {@inheritDoc}
      */
-    public function loadAssets()
+    protected function loadAssets()
     {
         $this->actAsParent();
         parent::loadAssets();
@@ -65,7 +65,7 @@ class MLRichEditor extends RichEditor
 
         if (Locale::isAvailable()) {
             $this->loadLocaleAssets();
-            $this->addJs('js/mlswitcher.js');
+            $this->addJs('js/mlricheditor.js');
         }
     }
 
@@ -82,5 +82,4 @@ class MLRichEditor extends RichEditor
             $this->viewPath = $this->originalViewPath;
         }
     }
-
 }

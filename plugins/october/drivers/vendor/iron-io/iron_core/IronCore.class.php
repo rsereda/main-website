@@ -5,14 +5,14 @@
  * @link https://github.com/iron-io/iron_core_php
  * @link http://www.iron.io/
  * @link http://dev.iron.io/
- * @version 0.2.3
+ * @version 0.2.1
  * @package IronCore
  * @copyright BSD 2-Clause License. See LICENSE file.
  */
 
 class IronCore
 {
-    protected $core_version = '0.2.3';
+    protected $core_version = '0.2.1';
 
     // should be overridden by child class
     protected $client_version = null;
@@ -252,7 +252,7 @@ class IronCore
                     curl_setopt($this->curl, CURLOPT_CUSTOMREQUEST, self::POST);
                     curl_setopt($this->curl, CURLOPT_POST, true);
                     // php 5.6+ requires this for @file style uploads
-                    if (defined('CURLOPT_SAFE_UPLOAD'))
+                    if (!class_exists("\CURLFile") && defined('CURLOPT_SAFE_UPLOAD'))
                     {
                         curl_setopt($this->curl, CURLOPT_SAFE_UPLOAD, false);
                     }
@@ -335,12 +335,6 @@ class IronCore
                 case self::HTTP_ACCEPTED:
                     return $_out;
                 case Http_Exception::INTERNAL_ERROR:
-                    if (strpos($_out, "EOF") !== false) {
-                        self::waitRandomInterval($retry);
-                    } else {
-                        $this->reportHttpError($this->last_status, $_out);
-                    }
-                    break;
                 case Http_Exception::SERVICE_UNAVAILABLE:
                 case Http_Exception::GATEWAY_TIMEOUT:
                     self::waitRandomInterval($retry);

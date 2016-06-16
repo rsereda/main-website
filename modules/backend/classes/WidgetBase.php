@@ -4,7 +4,6 @@ use Str;
 use File;
 use Session;
 use October\Rain\Html\Helper as HtmlHelper;
-use October\Rain\Extension\Extendable;
 use stdClass;
 
 /**
@@ -13,7 +12,7 @@ use stdClass;
  * @package october\backend
  * @author Alexey Bobkov, Samuel Georges
  */
-abstract class WidgetBase extends Extendable
+abstract class WidgetBase
 {
     use \System\Traits\ViewMaker;
     use \System\Traits\AssetMaker;
@@ -72,8 +71,6 @@ abstract class WidgetBase extends Extendable
          */
         $this->loadAssets();
 
-        parent::__construct();
-
         /*
          * Initialize the widget.
          */
@@ -114,7 +111,7 @@ abstract class WidgetBase extends Extendable
     public function bindToController()
     {
         if ($this->controller->widget === null) {
-            $this->controller->widget = new stdClass();
+            $this->controller->widget = new \stdClass();
         }
 
         $this->controller->widget->{$this->alias} = $this;
