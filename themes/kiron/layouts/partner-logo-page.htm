@@ -4,6 +4,8 @@ description = "partner-logo-page"
 code = "new-top"
 
 [staticPage]
+
+[SubscribeForm]
 ==
 {variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
 
@@ -51,7 +53,7 @@ code = "new-top"
 
 <!-- Share bar -->
 {% partial "sharebar" %}
-
+{% component 'SubscribeForm' %}
 <!-- Footer -->
 {% partial "footer" %}
 

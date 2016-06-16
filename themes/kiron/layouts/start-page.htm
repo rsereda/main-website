@@ -8,8 +8,12 @@ description = "The Layout for the start page"
 code = "new-top"
 
 [Newslist]
+
+[SubscribeForm]
+
+[SubscribeForm SubscribeForm2]
 ==
-{##}
+{% component 'SubscribeForm' %}{##}
 {% partial 'start' start="true" %}
 
 {% partial "static-topmenu" %}
@@ -88,7 +92,7 @@ code = "new-top"
 
 <!-- Footer -->
 
-
+{% component 'SubscribeForm2' %}
 {% partial "footer" %}
 
 {% partial 'end' %}
