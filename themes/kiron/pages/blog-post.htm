@@ -25,6 +25,9 @@ linkedin = 1
 post = "post"
 ==
 <?php
+function onInit(){
+    $this['breadcrumbs'] = [['isActive' => 1, 'title' => 'About', 'url' => '/about'],['isActive' => 0, 'title' => 'Blog', 'url' => '/blog']];
+}
 function onEnd()
 {
     // Optional - set the page title to the post title
@@ -33,8 +36,15 @@ function onEnd()
 }
 ?>
 ==
-{% component 'SeoBlogPost' %}
+{% component 'SeoBlogPost' data=post %}
+
+
+
+{% put meta %}
+    <meta type="blabla" />
+{% endput %}
 {% if post %}
+    
     <h2>{{ post.title }}</h2>
 
     {% set post = blogPost.post %}

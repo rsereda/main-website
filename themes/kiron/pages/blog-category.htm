@@ -25,6 +25,9 @@ code = "new-top"
 [staticPage]
 ==
 <?php
+function onInit(){
+    $this['breadcrumbs'] = [['isActive' => 1, 'title' => 'About', 'url' => '/about'],['isActive' => 1, 'title' => 'Blog', 'url' => '/blog']];
+}
 function onEnd()
 {
     // Optional - set the page title to the category name

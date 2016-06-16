@@ -1,0 +1,29 @@
+// main: bootstrap.less
+
+.sidenav {
+  margin-top: 3rem;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  .active>a{
+    display: none;
+  }
+  li {
+    list-style-type: none;
+  }
+  a {
+    color: @brand-primary;
+    border-bottom: inherit;
+    &:before {
+      content: '\2192\00a0';
+      color: @kironRed;
+    }
+  }
+  a:hover {
+    color: @kironRed;
+    text-decoration: none;
+  }
+  .special-cta {
+    display: none;
+  }
+}

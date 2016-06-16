@@ -8,7 +8,7 @@ code = "new-top"
 {variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
 
 
-{% partial 'start' %}
+{% partial 'start' staticPage=staticPage %}
 
 
 
@@ -16,29 +16,25 @@ code = "new-top"
 
 {% partial "static-topmenu" %}
 
-<!-- Content -->
-<div class="title">
-  <h1>{{titleText}}</h1>
-</div>
-<div class="container">
+<main class="container">
   <div class="row">
-    <div style="margin-bottom: 90px;"></div>
-    <!-- <nav class="col-md-3 bs-docs-sidebar">
-        {% partial 'side-menu' items=staticMenu.menuItems class='' %}
-    </nav> -->
-
-    <div class="col-md-12">
-
+    
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        
+      <h1>{{titleText}}</h1>
+      
       {% page %}
+      
+      {% partial 'side-menu' items=staticMenu.menuItems class='sidenav' %}
 
+      
     </div>
+    <div class="col-md-2"></div>
     <div class="clearfix"></div>
-    <div style="padding-top:160px;"></div>
-
+    
   </div>
-</div>
-
-</div>
+</main>
 
 <!-- Share bar -->
 {% partial "sharebar" %}

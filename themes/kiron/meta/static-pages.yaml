@@ -25,36 +25,5 @@ static-pages:
         support-initiatives: {  }
         support-friends: {  }
     contact: {  }
-    garbage:
-        about-news: {  }
-        study:
-            study-apply: {  }
-            study-student-life: {  }
-            study-faq: {  }
-            study-information-students: {  }
-            study-student-resources: {  }
-            study-journey: {  }
-            study-aid: {  }
-            study-beyond-studying: {  }
-            study-curriculum: {  }
-            study-faculties: {  }
-            study-aachen: {  }
-            study-overview: {  }
-            study-content: {  }
-            study-structure: {  }
-            study-career: {  }
-            study-your-profile: {  }
-            study-student-support: {  }
-        support-donations: {  }
-        partners:
-            partners-competence-pool: {  }
-            partners-testimontals: {  }
-            partners-aachen: {  }
-        support-newsletter: {  }
-        support-blog: {  }
-        support-volunteers: {  }
-        support-kiron-ventures: {  }
-        support-become-partner: {  }
-        support-faq: {  }
     index: {  }
     schoepflin-foundation: {  }

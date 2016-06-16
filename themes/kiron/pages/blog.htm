@@ -26,7 +26,14 @@ code = "new-top"
 
 [staticPage]
 ==
+<?php
+function onInit(){
+    $this['breadcrumbs'] = [['isActive' => 1, 'title' => 'About', 'url' => '/about'],['isActive' => 1, 'title' => 'Blog', 'url' => '/blog']];
+}
+?>
+==
 <div class="row">
+    
     <div class="col-sm-10">
         {% component 'blogPosts' %}
     </div>

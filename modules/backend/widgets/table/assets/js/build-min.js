@@ -6,7 +6,6 @@ $.oc.table={}
 var Table=function(element,options){this.el=element
 this.$el=$(element)
 this.options=options
-this.disposed=false
 this.dataSource=null
 this.cellProcessors={}
 this.activeCellProcessor=null
@@ -25,9 +24,7 @@ if(this.options.postback&&this.options.clientDataSourceClass=='client')
 this.formSubmitHandler=this.onFormSubmit.bind(this)
 this.navigation=null
 this.recordsAddedOrDeleted=0
-this.disposeBound=this.dispose.bind(this)
-this.init()
-$.oc.foundation.controlUtils.markDisposable(element)}
+this.init()}
 Table.prototype.init=function(){this.createDataSource()
 this.initCellProcessors()
 this.navigation=new $.oc.table.helper.navigation(this)
@@ -44,7 +41,6 @@ throw new Error('The table client-side data source class "'+dataSourceClass+'" i
 this.dataSource=new $.oc.table.datasource[dataSourceClass](this)}
 Table.prototype.registerHandlers=function(){this.el.addEventListener('click',this.clickHandler)
 this.el.addEventListener('keydown',this.keydownHandler)
-this.$el.one('dispose-control',this.disposeBound)
 document.addEventListener('click',this.documentClickHandler)
 if(this.options.postback&&this.options.clientDataSourceClass=='client')
 this.$el.closest('form').bind('oc.beforeRequest',this.formSubmitHandler)
@@ -311,10 +307,7 @@ return
 if(this.activeCellProcessor&&this.activeCellProcessor.elementBelongsToProcessor(target))
 return
 this.unfocusTable()}
-Table.prototype.dispose=function(){if(this.disposed){return}
-this.disposed=true
-this.disposeBound=true
-this.unfocusTable()
+Table.prototype.dispose=function(){this.unfocusTable()
 this.dataSource.dispose()
 this.dataSource=null
 this.unregisterHandlers()

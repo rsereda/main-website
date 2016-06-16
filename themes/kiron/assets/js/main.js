@@ -6,46 +6,6 @@ $(window).scroll(function () {
 });
 
 
-$('#social-media-container-vertical').hide();
-
-setInterval(function () {
-  if (didScroll) {
-    didScroll = false;
-    var doc = $(document);
-    var top = doc.scrollTop();
-    var jWindow = $(window);
-
-    if(jWindow.width() > 900){
-      if(top < 400){
-        $('#social-media-container-vertical').fadeOut();
-
-      }else{
-        $('#social-media-container-vertical').fadeIn();
-
-      }
-    }else {
-      $('#social-media-container-vertical').hide();
-    }
-
-
-
-
-    $('.fadein').each( function(i){
-
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight()/3;
-      var bottom_of_window = jWindow.scrollTop() + jWindow.height();
-
-      /* If the object is completely visible in the window, fade it it */
-      if( bottom_of_window > bottom_of_object){
-
-        $(this).animate({'opacity':'1'},1000);
-        $(this).removeClass("fadein");
-      }
-
-    });
-  }
-}, 100);
-
 /*$('.contact-link').click(function(){
 $('#impressum').fadeIn();
 $('body').addClass('no-scroll');
