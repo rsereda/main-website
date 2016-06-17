@@ -1,0 +1,64 @@
+description = "betterplace-template"
+
+[staticPage]
+
+[staticMenu]
+code = "new-top"
+
+[SubscribeForm]
+==
+{variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
+
+{% partial 'start' staticPage=staticPage %}
+
+<div class="wrapper" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em;">
+
+{% partial "static-topmenu" %}
+
+<main class="container">
+  <div class="row">
+
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+      <h1 style="text-center">{{titleText}}</h1>
+
+      <div class="row">
+        {repeater name="img1" prompt="Add an image"}
+
+
+       <div>
+
+        <img src="
+            {mediafinder name="img1" label="img1"}{/mediafinder}
+        "/>
+        {%if loop.index is even %}
+          </div><div class="row">
+         {% endif %}
+
+        </div>
+        {/repeater}
+       </div>
+
+        {% page %}
+
+        {% partial 'donate-en-partial' %}
+
+
+        <img style="margin-top:20px" src="/storage/app/media/donation-pages/kiron-960_hires.jpg">
+
+      {% partial 'side-menu' items=staticMenu.menuItems class='sidenav' %}
+
+
+    </div>
+
+  </div>
+</main>
+
+<!-- Share bar -->
+{% partial "sharebar" %}
+{% component 'SubscribeForm' %}
+<!-- Footer -->
+{% partial "footer" %}
+
+{% partial "end" %}
