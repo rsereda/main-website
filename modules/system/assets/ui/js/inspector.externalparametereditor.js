@@ -23,11 +23,10 @@
     var Base = $.oc.foundation.base,
         BaseProto = Base.prototype
 
-    var ExternalParameterEditor = function(inspector, propertyDefinition, containerCell, initialValue) {
+    var ExternalParameterEditor = function(inspector, propertyDefinition, containerCell) {
         this.inspector = inspector
         this.propertyDefinition = propertyDefinition
         this.containerCell = containerCell
-        this.initialValue = initialValue
 
         Base.call(this)
 
@@ -44,7 +43,6 @@
         this.inspector = null
         this.propertyDefinition = null
         this.containerCell = null
-        this.initialValue = null
 
         BaseProto.dispose.call(this)
     }
@@ -110,16 +108,18 @@
     }
 
     ExternalParameterEditor.prototype.setInitialValue = function() {
-        if (!this.initialValue) {
+        var propertyValue = this.inspector.getPropertyValue(this.propertyDefinition.property)
+
+        if (!propertyValue) {
             return
         }
 
-        if (typeof this.initialValue !== 'string') {
+        if (typeof propertyValue !== 'string') {
             return
         }
 
         var matches = []
-        if (matches = this.initialValue.match(/^\{\{([^\}]+)\}\}$/)) {
+        if (matches = propertyValue.match(/^\{\{([^\}]+)\}\}$/)) {
             var value = $.trim(matches[1])
 
             if (value.length > 0) {
@@ -209,21 +209,15 @@
     ExternalParameterEditor.prototype.toggleEditorVisibility = function(show) {
         var container = this.getContainer(),
             children = container.children,
-            height = 19 
-
-        // Fixed value instead of trying to get the container cell height.
-        // If the editor is contained in initially hidden editor (collapsed group),
-        // the container cell will be unknown.
+            height = 0
 
         if (!show) {
-            /*
             height = this.containerCell.getAttribute('data-inspector-cell-height')
 
             if (!height) {
                 height = $(this.containerCell).height()
                 this.containerCell.setAttribute('data-inspector-cell-height', height)
             }
-            */
         }
 
         for (var i = 0, len = children.length; i < len; i++) {

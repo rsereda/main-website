@@ -190,7 +190,7 @@ class Controller
         /*
          * If the page was not found, render the 404 page - either provided by the theme or the built-in one.
          */
-        if (!$page || $url === '404') {
+        if (!$page) {
             $this->setStatusCode(404);
 
             // Log the 404 request
@@ -753,7 +753,6 @@ class Controller
     public function renderPartial($name, $parameters = [], $throwException = true)
     {
         $vars = $this->vars;
-        $this->vars = array_merge($this->vars, $parameters);
 
         /*
          * Alias @ symbol for ::
