@@ -3,26 +3,26 @@
 [SeoStaticPage]
 ==
 {% if post %}
-    
-    {% placeholder meta %}    
+
+    {% placeholder meta %}
     {% if post.seo_title %}
         <meta property="og:title"		content="{{ post.seo_title | generateTitle}}" />
-        
+
     {% else %}
         <meta property="og:title"		content="{{ post.title | generateTitle }}" />
     {% endif %}
-    
+
 
     {% if post.seo_description %}
         <meta property="og:description"		content="{{post.seo_description}}" />
     {% endif %}
-    
-    <!--{% if post.featured_images[0] %}
+
+    {% if post.featured_images[0] %}
         <meta property="og:image"		content="{{post.featured_images[0].path | app}}" />
-    {% endif %}-->
+    {% endif %}
 
 
-	
+
 
 {% else %}
 
@@ -41,17 +41,17 @@
     {% if SeoStaticPage.redirect_url %}
         <meta http-equiv="refresh" content="0; url={{SeoStaticPage.redirect_url}}" />
     {% endif %}
-    
+
     {% if SeoStaticPage.seo_title %}
         <title>{{SeoStaticPage.seo_title | generateTitle }}</title>
     {% else %}
         <title>{{ SeoStaticPage.title | generateTitle }}</title>
     {% endif %}
-    
+
     {% if SeoStaticPage.seo_description %}
         <meta name="description" content="{{SeoStaticPage.seo_description}}">
     {% endif %}
-    
+
     <meta property="og:title"		content="Kiron" />
     <meta property="og:image"		content="http://kiron.ngo/img/favicon/kiron-new.jpg" />
 	<meta property="og:image:type"		content="image/jpg" />
@@ -65,10 +65,10 @@
         <meta name="keywords" content="{{SeoCmsPage.seo_keywords}}">
     {% elseif SeoStaticPage.seo_keywords %}
         <meta name="keywords" content="{{SeoStaticPage.seo_keywords}}">
-    {% else %}   
+    {% else %}
         <meta name="keywords"			content="free, higher education, refugees" />
     {% endif %}
-    
+
 
 	<!-- OPEN GRAPH -->
 	<meta property="og:locale"		content="de_DE" />
