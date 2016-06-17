@@ -24,6 +24,7 @@ class Plugin extends PluginBase
     ];
   }
 
+
   public function register()
   {
     set_exception_handler([$this, 'handleException']);
