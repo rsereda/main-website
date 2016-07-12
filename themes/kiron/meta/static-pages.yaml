@@ -30,3 +30,7 @@ static-pages:
     donate-en: {  }
     privacy:
         privacy-privacy-policy-v1: {  }
+    jobs:
+        jobs-job1: {  }
+        jobs-oat: {  }
+        jobs-hri1: {  }
