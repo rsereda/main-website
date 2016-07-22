@@ -1,0 +1,47 @@
+description = "HR Layout"
+
+[staticPage]
+
+[staticMenu]
+code = "new-top"
+
+[SubscribeForm]
+==
+{variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
+
+{% partial 'start' staticPage=staticPage %}
+
+<div class="wrapper" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em;">
+
+{% partial "static-topmenu" %}
+
+<main class="container">
+  <div class="row">
+    
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        <img style="margin-top:20px" src="/storage/app/media/stock-images/kiron-144_hires_workingatkiron_2.jpg">
+
+        
+      <h1>{{titleText}}</h1>
+      
+      {% page %}
+      
+      {% partial 'side-menu' items=staticMenu.menuItems class='sidenav' %}
+
+      
+    </div>
+    <div class="col-md-2"></div>
+    <div class="clearfix"></div>
+    
+  </div>
+</main>
+
+<!-- Share bar -->
+{% partial "sharebar" %}
+{% component 'SubscribeForm' %}
+<!-- Footer -->
+{% partial "footer" %}
+
+{% partial "end" %}
