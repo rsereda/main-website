@@ -17,6 +17,24 @@ static-pages:
         study-student-services: {  }
     support:
         support-individuals: {  }
+        jobs:
+            jobs-job1: {  }
+            jobs-oat: {  }
+            jobs-hri1: {  }
+            jobs-accountant: {  }
+            jobs-webdesigner: {  }
+            jobs-head-student-services: {  }
+            jobs-student-support-project-manager: {  }
+            jobs-student-support-assistant: {  }
+            jobs-e-mentoring-specialist: {  }
+            jobs-direct-academics-specialist: {  }
+            jobs-coordinator-engineering-department: {  }
+            jobs-coordinator-cs: {  }
+            jobs-coordinator-social-science: {  }
+            jobs-quality-assurance-manager: {  }
+            jobs-research-coordinator: {  }
+            jobs-project-manager: {  }
+            jobs-regional-group-manager: {  }
         support-corporate: {  }
         support-foundation: {  }
         support-academic-institutions: {  }
@@ -30,8 +48,4 @@ static-pages:
     donate-en: {  }
     privacy:
         privacy-privacy-policy-v1: {  }
-    jobs:
-        jobs-job1: {  }
-        jobs-oat: {  }
-        jobs-hri1: {  }
     donate-de: {  }

@@ -4,8 +4,10 @@ items:
         title: About
         nesting: '1'
         type: static-page
+        url: ''
         code: ''
         reference: about
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -16,8 +18,10 @@ items:
                 title: 'About Childs'
                 nesting: '1'
                 type: static-page
+                url: ''
                 code: ''
                 reference: about
+                cmsPage: ''
                 replace: '1'
                 viewBag:
                     isHidden: '0'
@@ -25,9 +29,13 @@ items:
                     isExternal: '0'
             -
                 title: Blog
+                nesting: ''
                 type: cms-page
+                url: ''
                 code: ''
                 reference: blog
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -36,8 +44,10 @@ items:
         title: 'Kiron World'
         nesting: '1'
         type: static-page
+        url: ''
         code: ''
         reference: kiron-world
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -47,8 +57,10 @@ items:
         title: Study
         nesting: '1'
         type: static-page
+        url: ''
         code: ''
         reference: study2
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -58,19 +70,35 @@ items:
         title: 'Support Us'
         nesting: '1'
         type: static-page
+        url: ''
         code: ''
         reference: support
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Support Us childs'
+                nesting: '1'
+                type: static-page
+                code: ''
+                reference: support
+                replace: '1'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Contact
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: contact
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
