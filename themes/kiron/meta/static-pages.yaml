@@ -16,7 +16,6 @@ static-pages:
         study-applying-partner-university: {  }
         study-student-services: {  }
     support:
-        support-individuals: {  }
         jobs:
             jobs-job1: {  }
             jobs-oat: {  }
@@ -35,6 +34,7 @@ static-pages:
             jobs-research-coordinator: {  }
             jobs-project-manager: {  }
             jobs-regional-group-manager: {  }
+        support-individuals: {  }
         support-corporate: {  }
         support-foundation: {  }
         support-academic-institutions: {  }

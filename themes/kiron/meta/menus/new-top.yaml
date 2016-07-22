@@ -84,8 +84,10 @@ items:
                 title: 'Support Us childs'
                 nesting: '1'
                 type: static-page
+                url: ''
                 code: ''
                 reference: support
+                cmsPage: ''
                 replace: '1'
                 viewBag:
                     isHidden: '0'
@@ -102,5 +104,16 @@ items:
         replace: '0'
         viewBag:
             isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Jobs
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: jobs
+        replace: '0'
+        viewBag:
+            isHidden: '1'
             cssClass: ''
             isExternal: '0'
