@@ -1,1 +1,1 @@
-/home/forge/dev.kiron.ngo/index.php
+/home/forge/default/index.php
