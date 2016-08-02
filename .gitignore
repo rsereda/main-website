@@ -7,4 +7,4 @@ themes/wings/pages/mail.htm
 node_modules/
 .vagrant/*
 .idea/
-modules/
+modules/**
