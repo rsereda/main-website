@@ -109,8 +109,8 @@ class Messages extends Controller
 
         $dataSource->bindEvent('data.getRecords', function($offset, $count) use ($selectedFrom, $selectedTo) {
             $messages = $count
-                ? Message::limit($count)->offset($offset)->get()
-                : Message::all();
+                ? Message::orderBy('message_data','asc')->limit($count)->offset($offset)->get()
+                : Message::orderBy('message_data','asc')->get();
 
             $result = $this->processTableData($messages, $selectedFrom, $selectedTo);
             return $result;
@@ -123,6 +123,7 @@ class Messages extends Controller
         $dataSource->bindEvent('data.updateRecord', function($key, $data) {
             $message = Message::find($key);
             $this->updateTableData($message, $data);
+            CacheHelper::clear();
         });
 
         $dataSource->bindEvent('data.deleteRecord', function($key) {
