@@ -19,7 +19,8 @@ static-pages:
         jobs:
             jobs-job1: {  }
             jobs-oat: {  }
-            jobs-hri1: {  }
+            jobs-hri1:
+                jobs-hri1-test: {  }
             jobs-accountant: {  }
             jobs-webdesigner: {  }
             jobs-head-student-services: {  }
