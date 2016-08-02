@@ -123,7 +123,7 @@ return [
       'default' => [
         'host'     => env('REDIS_HOST', '127.0.0.1'),
         'port'     => 6379,
-        'database' => 'kiron_october',
+        'database' => 0,
       ],
 
     ],
