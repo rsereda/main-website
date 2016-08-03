@@ -17,10 +17,21 @@ static-pages:
         study-student-services: {  }
     support:
         jobs:
+            jobs-wissenschaftlicher-mitarbeiter:
+                jobs-wissenschaftlicher-mitarbeiter-job1: {  }
+                jobs-wissenschaftlicher-mitarbeiter-job2: {  }
+                jobs-wissenschaftlicher-mitarbeiter-ddd: {  }
+                jobs-wissenschaftlicher-mitarbeiter-kiron-student-services-vollzeit-2016: {  }
+                jobs-wissenschaftlicher-mitarbeiter-fachbereichskoordination-business-economics-vollzeit-2016: {  }
+                jobs-wissenschaftlicher-mitarbeiter-fachbereichskoordniation-computer-sciene-vollzeit-2016: {  }
+                jobs-wissenschaftlicher-mitarbeiter-fachbereichskoordination-engineering-vollzeit-2016: {  }
+                jobs-wissenschaftlicher-mitarbeiter-wissenschaftspropaedeutik-sozialwissenschaften-vollzeit-2016: {  }
+                jobs-wissenschaftlicher-mitarbeiter-kiron-direct-academics-vollzeit-2016: {  }
+                jobs-wissenschaftlicher-mitarbeiter-kiron-e-mentoring-dreiviertel-2016: {  }
+                jobs-wissenschaftlicher-mitarbeiter-kiron-empower-vollzeit-2016: {  }
             jobs-job1: {  }
             jobs-oat: {  }
-            jobs-hri1:
-                jobs-hri1-test: {  }
+            jobs-hri1: {  }
             jobs-accountant: {  }
             jobs-webdesigner: {  }
             jobs-head-student-services: {  }

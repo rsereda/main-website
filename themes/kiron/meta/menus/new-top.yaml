@@ -106,14 +106,3 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-    -
-        title: Jobs
-        nesting: '1'
-        type: static-page
-        code: ''
-        reference: jobs
-        replace: '0'
-        viewBag:
-            isHidden: '1'
-            cssClass: ''
-            isExternal: '0'
