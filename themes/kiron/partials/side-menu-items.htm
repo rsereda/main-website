@@ -5,10 +5,8 @@
     {% if item.isActive %}
         <li class="{{ item.isActive ? 'active' : '' }} {{ item.items ? '' : '' }}">
             <a href="{{ item.url }}">{{ item.title }}</a>
-            {% if item.items %}
-               
-                {% partial 'menu-items' items=item.items class='sidenav sidenav-stacked' %}
-             
+            {% if item.items %}               
+                {% partial 'menu-items' items=item.items class='sidenav sidenav-stacked' %}             
             {% endif %}
         </li>
     {% endif %}

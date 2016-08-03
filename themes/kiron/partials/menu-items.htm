@@ -2,7 +2,6 @@
 ==
 <ul class="{{ class }}">
     {% for item in items if not item.viewBag.isHidden %}
-        {% if  not item.hidden %}
         <li
             class="{{ item.isActive or item.isChildActive ? 'active' : '' }} {{ item.items ? '' : '' }}"
         >
@@ -14,7 +13,6 @@
             </a>
 
         </li>
-        {% endif %}
     {% endfor %}
           <li class='special-cta'><a href='/study/apply-admission'>Apply</a></li>
           <li class='special-cta'><a href='/donate-en'>Donate</a></li>

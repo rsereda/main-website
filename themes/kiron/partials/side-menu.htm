@@ -1,8 +1,12 @@
 [viewBag]
 ==
 {% for item in items %}
-        {% if item.isActive %}
-            {% partial 'side-menu-items' items=items class="sidenav sidenav-stacked"  %}
+        {% if item.isActive or item.isChildActive %}
+            {% if item.isChildActive %}
+                {% partial 'side-menu' items=item.items class='sidenav' %}
+            {% else %}
+                {% partial 'side-menu-items' items=items class="sidenav sidenav-stacked"  %}
+            {% endif %}
         {% endif %}
             
 {% endfor %}
