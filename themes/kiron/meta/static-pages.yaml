@@ -34,6 +34,7 @@ static-pages:
                 jobs-interns-mini-jobs-working-students-student-assistant-social-work-minijob-2016: {  }
             jobs-job1: {  }
             jobs-hri1: {  }
+            jobs-donor-relations-manager: {  }
             jobs-oat: {  }
             jobs-management-assistance-fulltime-september-2016-berlin: {  }
             jobs-accountant: {  }
@@ -68,3 +69,4 @@ static-pages:
         privacy-privacy-policy-v1: {  }
         privacy-privacy-policy-v2: {  }
     donate-de: {  }
+    donate-fr: {  }
