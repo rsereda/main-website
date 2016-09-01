@@ -26,12 +26,12 @@ Route::any('study/{path?}', function($path = null) use ($keepStudy){
 
 $redirectSupport = [
 'individuals' => 'for-individuals',
-'corporate' =>	'/for-organisations/corporate-engagement',
-'foundation' =>	'/for-organisations/support-us-as-a-founda;tion',
-'academic-institutions' =>	'/for-academic-institutions/academic;-institutions',
-'supporters' =>	'/for-individuals/our-supporters',
-'ngo-and-non-profits' =>	'/for-organisations/supp;ort-us-as-an-ngo-or-non-profit',
-'friends' =>	'/for-organisations/support-us-as-a-friend',
+'corporate' =>	'for-organisations/corporate-engagement',
+'foundation' =>	'for-organisations/support-us-as-a-founda;tion',
+'academic-institutions' =>	'for-academic-institutions/academic;-institutions',
+'supporters' =>	'for-individuals/our-supporters',
+'ngo-and-non-profits' =>	'for-organisations/supp;ort-us-as-an-ngo-or-non-profit',
+'friends' =>	'for-organisations/support-us-as-a-friend',
 ];
 
 Route::any('support/{path?}', function($path = null) use ($redirectSupport){
