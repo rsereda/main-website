@@ -6,7 +6,7 @@ items:
         type: static-page
         url: ''
         code: ''
-        reference: about
+        reference: about-new
         cmsPage: ''
         replace: '0'
         viewBag:
@@ -20,7 +20,7 @@ items:
                 type: static-page
                 url: ''
                 code: ''
-                reference: about
+                reference: about-new
                 cmsPage: ''
                 replace: '1'
                 viewBag:
@@ -41,12 +41,12 @@ items:
                     cssClass: ''
                     isExternal: '0'
     -
-        title: 'Kiron World'
+        title: 'For Students'
         nesting: '1'
         type: static-page
         url: ''
         code: ''
-        reference: kiron-world
+        reference: for-students
         cmsPage: ''
         replace: '0'
         viewBag:
@@ -54,12 +54,36 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: Study
+        title: 'For Academic Institutions'
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: for-academic-institutions
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'For Organisations'
         nesting: '1'
         type: static-page
         url: ''
         code: ''
-        reference: study2
+        reference: for-organisations
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'For Individuals'
+        nesting: '1'
+        type: static-page
+        url: ''
+        code: ''
+        reference: for-individuals
         cmsPage: ''
         replace: '0'
         viewBag:
@@ -70,13 +94,11 @@ items:
         title: 'Support Us'
         nesting: '1'
         type: static-page
-        url: ''
         code: ''
         reference: support
-        cmsPage: ''
         replace: '0'
         viewBag:
-            isHidden: '0'
+            isHidden: '1'
             cssClass: ''
             isExternal: '0'
         items:

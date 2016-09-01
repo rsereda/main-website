@@ -2,7 +2,6 @@ static-pages:
     about:
         about-challenge-solution: {  }
         our-impact: {  }
-        about-team: {  }
         about-branches: {  }
         about-compentency-pool: {  }
     kiron-world:
@@ -12,10 +11,56 @@ static-pages:
         kiron-world-reinventing-education: {  }
     study2:
         study-tracks: {  }
-        study-apply-admission: {  }
         study-applying-partner-university: {  }
         study-student-services: {  }
     support:
+        support-initiatives: {  }
+    contact: {  }
+    index: {  }
+    schoepflin-foundation: {  }
+    donate-en: {  }
+    privacy:
+        privacy-policy-v2-1: {  }
+        privacy-privacy-policy-v1: {  }
+        privacy-privacy-policy-v2: {  }
+    donate-de: {  }
+    donate-fr: {  }
+    about-new:
+        about-new-why-are-we-named-kiron: {  }
+        about-new-kiron-at-a-glance: {  }
+        about-new-our-challenge-our-solution: {  }
+        about-new-kirons-value-add: {  }
+        about-kiron-international: {  }
+        about-team: {  }
+    for-students:
+        for-students-how-does-it-work: {  }
+        for-students-what-are-my-study-options:
+            for-students-what-are-my-study-options-business-economics: {  }
+            for-students-what-are-my-study-options-engineering: {  }
+            for-students-what-are-my-study-options-computer-science: {  }
+            for-students-what-are-my-study-options-social-sciences: {  }
+        for-students-how-can-we-help-your-studies: {  }
+        study-apply-admission: {  }
+    for-organisations:
+        for-organisations-how-does-it-work: {  }
+        for-organisations-kiron-study-tracks:
+            for-organisations-kiron-study-tracks-business-and-economics: {  }
+            for-organisations-kiron-study-tracks-engineering: {  }
+            for-organisations-kiron-study-tracks-computer-science: {  }
+            for-organisations-kiron-study-tracks-social-sciences: {  }
+        for-organisations-how-can-we-support-our-students-their-studies: {  }
+        support-corporate: {  }
+        support-foundation: {  }
+        support-ngos-and-non-profits: {  }
+        support-friends: {  }
+    for-individuals:
+        for-individuals-how-does-it-work: {  }
+        for-individuals-the-kiron-study-tracks:
+            for-individuals-the-kiron-study-tracks-business-and-economics: {  }
+            for-individuals-the-kiron-study-tracks-engineering: {  }
+            for-individuals-the-kiron-study-tracks-computer-science: {  }
+            for-individuals-the-kiron-study-tracks-social-sciences: {  }
+        for-individuals-how-do-we-support-our-students-their-studies: {  }
         jobs:
             jobs-wissenschaftlicher-mitarbeiter:
                 jobs-wissenschaftlicher-mitarbeiter-job1: {  }
@@ -53,20 +98,20 @@ static-pages:
             jobs-project-manager: {  }
             jobs-regional-group-manager: {  }
         support-individuals: {  }
-        support-corporate: {  }
-        support-foundation: {  }
-        support-academic-institutions: {  }
+        for-individuals-i-want-to-donate: {  }
         support-contributors: {  }
-        support-ngos-and-non-profits: {  }
-        support-initiatives: {  }
-        support-friends: {  }
-    contact: {  }
-    index: {  }
-    schoepflin-foundation: {  }
-    donate-en: {  }
-    privacy:
-        privacy-policy-v2-1: {  }
-        privacy-privacy-policy-v1: {  }
-        privacy-privacy-policy-v2: {  }
-    donate-de: {  }
-    donate-fr: {  }
+    for-academic-institutions:
+        for-academic-institutions-blended-learning-20-model: {  }
+        for-academic-institutions-study-tracks:
+            for-academic-institutions-study-tracks-social-sciences: {  }
+            for-academic-institutions-study-tracks-business-economics: {  }
+            for-academic-institutions-study-tracks-computer-science: {  }
+            for-academic-institutions-study-tracks-engineering: {  }
+        for-academic-institutions-how-do-we-support-our-students-their-studies: {  }
+        for-academic-institutions-how-to-collaborate:
+            for-academic-institutions-how-to-collaborate-option-1-development-and-recognition: {  }
+            for-academic-institutions-how-to-collaborate-option-2-curriculum-development: {  }
+            for-academic-institutions-how-to-collaborate-option-3-alternative-paths-collaborate: {  }
+        for-academic-institutions-why-collaborate: {  }
+        for-academic-institutions-more-detailed-information: {  }
+        support-academic-institutions: {  }
