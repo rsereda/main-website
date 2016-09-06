@@ -1,20 +1,4 @@
 static-pages:
-    about:
-        about-challenge-solution: {  }
-        our-impact: {  }
-        about-branches: {  }
-        about-compentency-pool: {  }
-    kiron-world:
-        kiron-world-driving-innovation: {  }
-        kiron-world-research: {  }
-        kiron-world-empowering-individuals: {  }
-        kiron-world-reinventing-education: {  }
-    study2:
-        study-tracks: {  }
-        study-applying-partner-university: {  }
-        study-student-services: {  }
-    support:
-        support-initiatives: {  }
     contact: {  }
     index: {  }
     schoepflin-foundation: {  }
