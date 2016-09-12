@@ -8,8 +8,8 @@ code = "new-top"
 [SubscribeForm]
 ==
 {variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
-
 {% partial 'start' staticPage=staticPage %}
+{% partial "facebook-snippet" %}
 
 <div class="wrapper" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em;">
 
@@ -18,10 +18,11 @@ code = "new-top"
 <main class="container">
   <div class="row">
 
+    
     <div class="col-md-2"></div>
     <div class="col-md-8">
-
-      <h1 style="text-center">{{titleText}}</h1>
+        {% partial "flags-donate" %}
+          <h1 style="text-center">{{titleText}}</h1>
 
       <div class="row">
         {repeater name="img1" prompt="Add an image"}
