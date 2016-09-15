@@ -46,41 +46,14 @@ static-pages:
             for-individuals-the-kiron-study-tracks-social-sciences: {  }
         for-individuals-how-do-we-support-our-students-their-studies: {  }
         jobs:
-            jobs-wissenschaftlicher-mitarbeiter:
-                jobs-wissenschaftlicher-mitarbeiter-job1: {  }
-                jobs-wissenschaftlicher-mitarbeiter-job2: {  }
-                jobs-wissenschaftlicher-mitarbeiter-ddd: {  }
-                jobs-wissenschaftlicher-mitarbeiter-kiron-student-services-vollzeit-2016: {  }
-                jobs-wissenschaftlicher-mitarbeiter-fachbereichskoordination-business-economics-vollzeit-2016: {  }
-                jobs-wissenschaftlicher-mitarbeiter-fachbereichskoordniation-computer-sciene-vollzeit-2016: {  }
-                jobs-wissenschaftlicher-mitarbeiter-fachbereichskoordination-engineering-vollzeit-2016: {  }
-                jobs-wissenschaftlicher-mitarbeiter-wissenschaftspropaedeutik-sozialwissenschaften-vollzeit-2016: {  }
-                jobs-wissenschaftlicher-mitarbeiter-kiron-direct-academics-vollzeit-2016: {  }
-                jobs-wissenschaftlicher-mitarbeiter-kiron-e-mentoring-dreiviertel-2016: {  }
-                jobs-wissenschaftlicher-mitarbeiter-kiron-empower-vollzeit-2016: {  }
             jobs-interns-mini-jobs-working-students:
                 jobs-interns-mini-jobs-working-students-intern-student-services-munich-2016: {  }
                 jobs-interns-mini-jobs-working-students-student-assistant-social-work-minijob-2016: {  }
-            jobs-job1: {  }
             jobs-hri1: {  }
             jobs-donor-relations-manager: {  }
-            jobs-oat: {  }
             jobs-management-assistance-fulltime-september-2016-berlin: {  }
-            jobs-accountant: {  }
-            jobs-webdesigner: {  }
-            jobs-head-student-services: {  }
-            jobs-student-support-project-manager: {  }
-            jobs-student-support-assistant: {  }
-            jobs-e-mentoring-specialist: {  }
-            jobs-direct-academics-specialist: {  }
-            jobs-coordinator-engineering-department: {  }
-            jobs-coordinator-cs: {  }
-            jobs-coordinator-social-science: {  }
-            jobs-coordinator-economics-berlin-fulltime-2016: {  }
-            jobs-quality-assurance-manager: {  }
-            jobs-research-coordinator: {  }
-            jobs-project-manager: {  }
-            jobs-regional-group-manager: {  }
+            for-individuals-jobs-devops-cloud-architecture-berlin-2016-fulltime: {  }
+            for-individuals-jobs--backend-php-developer-berlin-2016-fulltime: {  }
         support-individuals: {  }
         for-individuals-i-want-to-donate: {  }
         support-contributors: {  }
