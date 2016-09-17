@@ -1,0 +1,36 @@
+description = "Show only the content"
+
+[staticPage]
+
+[staticMenu]
+==
+{variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
+
+
+{% partial 'start' staticPage=staticPage %}
+
+
+
+<div class="wrapper" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em;">
+
+
+
+<main class="container">
+  <div class="row">
+    
+    <div class="col-md-2"></div>
+    <div class="col-md-8">              
+      
+      {% page %}
+            
+      
+    </div>
+    <div class="col-md-2"></div>
+    <div class="clearfix"></div>
+    
+  </div>
+</main>
+
+
+
+{% partial "end" %}

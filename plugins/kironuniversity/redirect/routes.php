@@ -8,6 +8,10 @@ Route::any('jobs', function(){
   return Redirect::to('/for-individuals/jobs', 301);
 });
 
+Route::any('/donate-merci-reffb&refID=778761',function(){
+  return Redirect::to('/donate-merci-reffb');
+});
+
 Route::any('study/tracks', function(){
   return Redirect::to('/for-students/what-are-my-study-options', 301);
 });
