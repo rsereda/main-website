@@ -31,8 +31,8 @@ class Deploy extends Controller
       $pushLog =  '';
       $mergeLog = '';
       if($git->hasChanges()){
-        $pushLog =  $git->add('.')->commit('content updates')->push('origin/dev')->getOutput();
-        $mergeLog = $git->checkout('master')->merge('dev')->push('origin/master')->checkout('dev')->getOutput();
+        $pushLog =  nl2br($git->add('.')->commit('content updates')->push('origin/dev')->getOutput());
+        $mergeLog = nl2br($git->checkout('master')->merge('dev')->push('origin/master')->checkout('dev')->getOutput());
       }
       Flash::success('Done');
       return ['#output' => '<p>'.$pushLog.'</p><p>'.$mergeLog.'</p>'];
