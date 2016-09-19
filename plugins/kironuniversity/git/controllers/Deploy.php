@@ -27,6 +27,7 @@ class Deploy extends Controller
 
     public function onPush(){
       $wrapper = new GitWrapper('git');
+      $wrapper->git('config --global push.default simple');
       $git =  $wrapper->workingCopy('.');
       $pushLog =  '';
       $mergeLog = '';
