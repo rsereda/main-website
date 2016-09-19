@@ -8,7 +8,7 @@ Route::any('jobs', function(){
   return Redirect::to('/for-individuals/jobs', 301);
 });
 
-Route::any('/donate-merci-reffb&refID=778761',function(){
+Route::any('/donate-merci-reffb&refID={id?}',function(){
   return Redirect::to('/donate-merci-reffb');
 });
 
