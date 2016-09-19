@@ -29,10 +29,11 @@ class Deploy extends Controller
       $wrapper = new GitWrapper('git');
       $wrapper->git('config --global push.default simple');
       $git =  $wrapper->workingCopy('.');
+      $git->checkout('dev');
       $pushLog =  '';
       $mergeLog = '';
       if($git->hasChanges()){
-        $pushLog =  nl2br($git->checkout('dev')->add('.')->commit('content updates')->push()->getOutput());
+        $pushLog =  nl2br($git->add('.')->commit('content updates')->push()->getOutput());
         $mergeLog = nl2br($git->checkout('master')->merge('dev')->push()->checkout('dev')->getOutput());
       }
       Flash::success('Done');
