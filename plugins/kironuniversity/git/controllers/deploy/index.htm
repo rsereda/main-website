@@ -1,0 +1,15 @@
+<?php if($changed) { ?>
+  <p>There are changes push them to the server now!</p>
+
+  <p><strong>Changes</strong><br><?= $changes ?></p>
+  <p>
+    <button
+    type="button"
+    data-request="onPush"
+    class="btn btn-primary">
+    Push changes
+</button>
+  </p>
+<?php } else { ?>
+  There are no changes.
+<?php } ?>
