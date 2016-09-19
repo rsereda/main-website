@@ -29,8 +29,10 @@ class Deploy extends Controller
       $wrapper = new GitWrapper('git');
       $git =  $wrapper->workingCopy('.');
       if($git->hasChanges){
-        $git->add('.')->commit('content updates')->push();
+        $pushLog =  $git->add('.')->commit('content updates')->push()->getOutput();
+        $mergeLog = $git->checkout('master')->merge('dev')->push()->checkout('dev')->getOutput();
       }
       Flash::success('Done');
+      return ['#output' => '<p>'.$pushLog.'</p><p>'.$mergeLog.'</p>'];
     }
 }
