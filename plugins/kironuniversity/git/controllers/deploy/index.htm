@@ -3,14 +3,17 @@
 
   <p><strong>Changes</strong><br><?= $changes ?></p>
   <p>
-    <button
-    type="button"
-    data-request="onPush"
-    class="btn btn-primary">
-    Push changes
-</button>
-  </p>
-  <div id="output"></div>
+    <div class="loading-indicator-container">
+      <button
+      type="button"
+      data-request="onPush"
+      data-load-indicator="Pushing Updates"
+      class="btn btn-primary">
+      Push changes
+    </button>
+  </div>
+</p>
+<div id="output"></div>
 <?php } else { ?>
   There are no changes.
-<?php } ?>
+  <?php } ?>
