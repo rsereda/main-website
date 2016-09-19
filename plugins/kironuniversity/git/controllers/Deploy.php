@@ -28,7 +28,7 @@ class Deploy extends Controller
     public function onPush(){
       $wrapper = new GitWrapper('git');
       $git =  $wrapper->workingCopy('.');
-      if($git->hasChanges){
+      if($git->hasChanges()){
         $pushLog =  $git->add('.')->commit('content updates')->push()->getOutput();
         $mergeLog = $git->checkout('master')->merge('dev')->push()->checkout('dev')->getOutput();
       }
