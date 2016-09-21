@@ -7,6 +7,8 @@ description = "Show only the content"
 {variable name="titleText" label="Title" tab="Header" type="text"}{/variable}
 
 
+{% partial 'start' staticPage=staticPage %}
+
 <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,18 +19,12 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1790899917863578');
 fbq('track', "PageView");
-fbq('track', 'Purchase');
+fbq('track', 'Purchase', {value: '1.00', currency: 'USD'});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1790899917863578&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
-
-;
-
-{% partial 'start' staticPage=staticPage %}
-
-
 
 <div class="wrapper" style="min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -4em;">
 
