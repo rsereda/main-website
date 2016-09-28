@@ -1,1 +1,2 @@
-1,placeholders,path_or_url,/testred2,/about,,,301,[],,
+1,exact,path_or_url,/trestred2,/about,,,301,[],,
+2,exact,path_or_url,/blub,/about,,,301,[],,
