@@ -241,8 +241,6 @@ class Redirect extends Model
             $options[$value] = trans("adrenth.redirect::lang.redirect.$value");
         }
 
-        dd($options);
-
         return $options;
     }
 
