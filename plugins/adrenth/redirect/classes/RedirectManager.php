@@ -396,16 +396,18 @@ class RedirectManager
         $now = Carbon::now();
 
         /** @var Redirect $redirect */
+
         $redirect = Redirect::find($redirectId);
 
         if ($redirect === null) {
             return;
         }
-
+        dd($redirect);
         $redirect->update([
             'hits' => DB::raw('hits + 1'),
             'last_used_at' => $now,
         ]);
+        dd($redirect);
 
         $crawlerDetect = new CrawlerDetect();
 

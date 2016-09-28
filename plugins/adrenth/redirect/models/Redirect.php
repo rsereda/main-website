@@ -140,6 +140,7 @@ class Redirect extends Model
         array $customMessages = [],
         array $attributeNames = []
     ) {
+
         $validator = self::traitMakeValidator($data, $rules, $customMessages, $attributeNames);
 
         $validator->sometimes('to_url', 'required', function (Fluent $request) {
@@ -239,6 +240,8 @@ class Redirect extends Model
         foreach (self::$types as $value) {
             $options[$value] = trans("adrenth.redirect::lang.redirect.$value");
         }
+
+        dd($options);
 
         return $options;
     }

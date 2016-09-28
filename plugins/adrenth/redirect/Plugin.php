@@ -69,6 +69,7 @@ class Plugin extends PluginBase
 
         $requestUri = str_replace(Request::getBasePath(), '', Request::getRequestUri());
         $manager = RedirectManager::createWithRulesPath($rulesPath);
+
         $rule = $manager->match($requestUri);
 
         if ($rule) {
