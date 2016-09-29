@@ -8,3 +8,4 @@ node_modules/
 .vagrant/*
 .idea/
 modules/**
+/public
