@@ -11,7 +11,7 @@ function onStart()
 }
 ?>
 ==
-<div class="navbar navbar-default navbar-fixed-top" id="headnav" role="navigation">
+<div class="navbar navbar-default navbar-static-top fix-for-padding-top" id="headnav" role="navigation">
     <div class="container-fluid">
         <div class="row" id="topnav">
             <div>
@@ -32,31 +32,33 @@ function onStart()
               </button>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <nav id="navbar" class="navbar-collapse collapse navbar-left">
-            {% partial 'menu-items' items=staticMenu.menuItems class='nav navbar-nav' %}
-        </nav>
-    </div>
-
-    {% if breadcrumbs %}
-            <div class='breadcrumb-nav'>
-                <div class='container'>
-                    <div class="row">
-                    <div class='col-md-2'></div>
-                    <ul class = "breadcrumb col-md-8">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                    {% for breadcrumb in breadcrumbs %}
-                        <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
-                            <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
-                        </li>
-                    {% endfor %}
-                    </ul>
+        <div class="row">
+            <nav id="navbar" class="navbar-collapse collapse navbar-left">
+                {% partial 'menu-items' items=staticMenu.menuItems class='nav navbar-nav' %}
+            </nav>
+        </div>
+    
+        {% if breadcrumbs %}
+            <div id="breadcrumb-bar" class="row">
+                <div class='breadcrumb-nav'>
+                    <div class='container'>
+                        <div class="row">
                         <div class='col-md-2'></div>
+                        <ul class = "breadcrumb col-md-8">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                        {% for breadcrumb in breadcrumbs %}
+                            <li class="{{ breadcrumb.isActive ? 'active' : '' }}">
+                                <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                            <div class='col-md-2'></div>
+                        </div>
                     </div>
                 </div>
             </div>
-    {% endif %}
+        {% endif %}
+    </div>
 </div>
