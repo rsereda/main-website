@@ -18,23 +18,23 @@ code = "new-top"
 
 {% partial "static-topmenu" %}
 
-<main id="main-body" class="container">
+<main id="main-body" class="container" style="margin-top:-30px;">
   <div class="row">
-    
+
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        
-      <h1>{{titleText}}</h1>
-      
+
+      <!-- <h1>{{titleText}}</h1> -->
+
       {% page %}
-      
+
       {% partial 'side-menu' items=staticMenu.menuItems class='sidenav' %}
 
-      
+
     </div>
     <div class="col-md-2"></div>
     <div class="clearfix"></div>
-    
+
   </div>
 </main>
 

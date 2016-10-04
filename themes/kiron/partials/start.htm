@@ -4,6 +4,7 @@ description = "Contains the start code for layouts"
 ==
 <?php
 function onStart(){
+
     $this['style']  = file_get_contents('themes/kiron/assets/css/splash.min.css');
     $this['js'] =  file_get_contents('themes/kiron/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js');
 }
@@ -57,4 +58,4 @@ lang="en-EN"
 
 </head>
 
-<body class='{{ this.page.layout }}' style="margin-top: 0px;">
+<body class='{{ this.page.layout }}' style="margin-top:-80px;">

@@ -11,7 +11,7 @@ function onStart()
 }
 ?>
 ==
-<div class="navbar navbar-default navbar-static-top fix-for-padding-top" id="headnav" role="navigation">
+<div class="navbar navbar-default navbar-static-top" id="headnav" role="navigation">
     <div class="container-fluid">
         <div class="row" id="topnav">
             <div>
@@ -37,7 +37,7 @@ function onStart()
                 {% partial 'menu-items' items=staticMenu.menuItems class='nav navbar-nav' %}
             </nav>
         </div>
-    
+
         {% if breadcrumbs %}
             <div id="breadcrumb-bar" class="row">
                 <div class='breadcrumb-nav'>
