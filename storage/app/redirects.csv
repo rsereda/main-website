@@ -1,2 +1,2 @@
-3,placeholders,path_or_url,/vr-survey?r={id},https://oregon.qualtrics.com/SE/?SID=SV_bs8Y6ad6ofv63zf&r={id},,,302,[],,
-4,placeholders,path_or_url,/vr/{id},https://oregon.qualtrics.com/SE/?SID=SV_bs8Y6ad6ofv63zf&r={id},,,302,[],,
+3,placeholders,path_or_url,/vr-survey?r={id},https://oregon.qualtrics.com/jfe/form/SV_bs8Y6ad6ofv63zf?r={id},,,302,[],,
+4,placeholders,path_or_url,/vr/{id},https://oregon.qualtrics.com/jfe/form/SV_bs8Y6ad6ofv63zf?r={id},,,302,[],,
