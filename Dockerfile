@@ -39,10 +39,10 @@ ARG PUID=1000
 ARG PGID=1000
 RUN groupadd -g $PGID webapp && \
     useradd -u $PUID -g webapp -m webapp
-COPY docker.env /.env
+
 
 RUN echo "" > /var/log/php7.0-fpm.log
 RUN chmod 644  /var/log/php7.0-fpm.log
 
 EXPOSE 9000
-CMD service php7.0-fpm start && cd /var/www/html/main-website && cp /.env .env | true && su webapp -c 'composer  install  ' &&    while true; do sleep 1000; done
+CMD service php7.0-fpm start  &&    while true; do sleep 1000; done
